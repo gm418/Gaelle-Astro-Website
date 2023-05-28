@@ -1,0 +1,15 @@
+---
+// data import
+import skillsData from "../data/skillsData";
+---
+
+<ul>
+    {
+        skillsData.map(skill => (
+            <li>
+                <i class={'uil-' + skill.icon}></i>
+                <p>{skill.name}</p>   
+            </li>
+        ))
+    }
+</ul>
