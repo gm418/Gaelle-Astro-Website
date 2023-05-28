@@ -1,21 +1,27 @@
 const skillsData = [
     {
-        name:"HTML5"
+        name: "HTML5",
+        icon: "html5"
     },
     {
-        name:"CSS3"
+        name: "CSS3",
+        icon: "css3-simple"
     },
     {
-        name:"JavaScript"
+        name:"JavaScript",
+        icon: "javascript"
     },
     {
-        name:"Sass"
+        name: "Sass",
+        icon: "sass"
     },
     {
-        name:"Tailwind"
+        name: "Tailwind",
+        icon: "tailwind"
     },
     {
-        name:"Figma"
+        name: "Figma",
+        icon: "figma"
     }
 ]
 
