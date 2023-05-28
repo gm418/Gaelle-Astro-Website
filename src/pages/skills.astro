@@ -2,8 +2,8 @@
 // component import
 import MainLayout from "../layouts/MainLayout.astro";
 
-// data import
-import skillsData from "../data/skillsData";
+// component import
+import Skill from "../components/Skill.astro";
 
 // styles import
 import "../styles/styles.css";
@@ -15,14 +15,5 @@ import "../styles/styles.css";
     sectionTitle="Compétences"
     sectionSubtitle="Je peux me rendre utile"
 >
-    <ul>
-        {
-            skillsData.map(skill => (
-                <li>
-                    <i class={'uil-' + skill.icon}></i>
-                    <p>{skill.name}</p>   
-                </li>
-            ))
-        }
-    </ul>
+    <Skill />
 </MainLayout>
