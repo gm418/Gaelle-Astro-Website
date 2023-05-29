@@ -1,0 +1,17 @@
+---
+const { data } = Astro.props;
+---
+
+<ul>
+  {
+    Object.entries(data).map(([key, value]: [string, any]) => (
+      <li astro-key={key}>
+        <p>{value.studyPeriod || value.employmentPeriod}</p>
+        <h3>{value.title || value.jobTitle}</h3>
+        <p>{value.school || value.company}</p>
+        <p>{value.description}</p>
+      </li>
+    ))
+  }
+</ul>
+
