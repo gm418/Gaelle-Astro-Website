@@ -1,6 +1,9 @@
 ---
 // layout import
 import MainLayout from "../layouts/MainLayout.astro"
+
+// styles import
+import "../styles/styles.css";
 ---
 
 <MainLayout
@@ -9,5 +12,19 @@ import MainLayout from "../layouts/MainLayout.astro"
     sectionTitle="Expérience"
     sectionSubtitle="Mon parcours professionnel"
 >
+
+<div>
+    <div>
+        <button>
+            <i class="uil-graduation-cap"></i>
+            Etudes
+        </button>
+        
+        <button>
+            <i class="uil-briefcase-alt"></i>
+            Travail
+        </button>
+    </div>
+</div>
 
 </MainLayout>
