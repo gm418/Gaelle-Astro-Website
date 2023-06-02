@@ -6,6 +6,11 @@ const { data } = Astro.props;
     {
         Object.entries(data).map(([key, value]: [string, any]) => (
             <div astro-key={key}>
+                {
+                    Object.entries(value.images).map(([imageKey, imageValue]: [string, any]) => (
+                        <img src={imageValue} alt="">   
+                    ))
+                }
                 <h3>{value.title}</h3>
                 <div>
                     {(value.techs).map(tech => <span>{tech}</span>)}
