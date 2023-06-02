@@ -1,10 +1,11 @@
 ---
-const { data } = Astro.props;
+// data import
+import portfolioData from "../data/portfolioData"
 ---
 
 <div>
     {
-        Object.entries(data).map(([key, value]: [string, any]) => (
+        Object.entries(portfolioData).map(([key, value]: [string, any]) => (
             <div astro-key={key}>
                 {
                     Object.entries(value.images).map(([imageKey, imageValue]: [string, any]) => (
