@@ -1,16 +1,40 @@
 ---
-const navItems = [
-    {title: "Accueil", url: "#"},
-    {title: "A propos", url: "#about"},
-    {title: "Compétences", url: "#skills"},
-    {title: "Expérience", url: "#qualification"},
-    {title: "Portfolio", url: "#portfolio"},
-    {title: "Contact", url: "#contact"},
+const navData = [
+    {title: "Accueil", url: "#", icon: "estate"},
+    {title: "A propos", url: "#about", icon: "user"},
+    {title: "Compétences", url: "#skills", icon: "file-alt"},
+    {title: "Expérience", url: "#qualification", icon: "briefcase-alt"},
+    {title: "Portfolio", url: "#portfolio", icon: "scenery"},
+    {title: "Contact", url: "#contact", icon: "message"},
 ]
 ---
 
-<header>
-    <nav>
-        Hello
-    </nav>
-</header>
+<nav class="nav container">
+    <a href="#">Gaëlle Morin</a>
+
+    <div>
+        <ul>
+            {
+                navData.map(item => (
+                    <li>
+                        <a href={item.url}>
+                            <i class={'uil-' + item.icon}></i>
+                            {item.title}    
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+        <i class="uil-times"></i>
+    </div>
+
+    <div class="nav__btns">
+        <!-- Theme change button -->
+        <i class="uil-moon"></i>
+
+        <div>
+            <i class="uil-apps"></i>
+        </div>
+    </div>
+</nav>
+
