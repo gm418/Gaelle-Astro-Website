@@ -1,0 +1,40 @@
+---
+// layout import
+import SectionLayout from "../../layouts/SectionLayout.astro";
+
+// data import
+import qualificationData from "../../data/qualificationData";
+
+// component import
+import QualificationTimeLine from "./QualificationTimeLine.astro";
+
+// styles import
+import "../../styles/styles.css";
+
+const {
+    sectionTitle="Expérience",
+    sectionSubtitle="Mon parcours professionnel"
+} = Astro.props
+---
+
+<SectionLayout {sectionTitle} {sectionSubtitle}>
+<div>
+    <div>
+        <button>
+            <i class="uil-graduation-cap"></i>
+            Etudes
+        </button>
+        
+        <button>
+            <i class="uil-briefcase-alt"></i>
+            Travail
+        </button>
+    </div>
+</div>
+
+<div>
+    <QualificationTimeLine data={qualificationData.education} />
+    <QualificationTimeLine data={qualificationData.workExp} />
+</div>
+
+</SectionLayout>

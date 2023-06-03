@@ -1,0 +1,19 @@
+---
+// layout import
+import SectionLayout from "../../layouts/SectionLayout.astro";
+
+// component import
+import SkillsCards from "./SkillsCards.astro";
+
+// styles import
+import "../../styles/styles.css";
+
+const {
+    sectionTitle="Compétences",
+    sectionSubtitle="Je peux me rendre utile"
+} = Astro.props
+---
+
+<SectionLayout {sectionTitle} {sectionSubtitle}>
+    <SkillsCards />
+</SectionLayout>

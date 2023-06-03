@@ -1,0 +1,17 @@
+---
+const {
+    sectionTitle,
+    sectionSubtitle
+} = Astro.props;
+---
+
+<section>
+    <div>
+        <h2>{sectionTitle}</h2>
+        <span>{sectionSubtitle}</span>
+
+        <div>
+            <slot>Default Text</slot>
+        </div>
+    </div>
+</section>

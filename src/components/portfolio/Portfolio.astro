@@ -1,0 +1,17 @@
+---
+// layout import
+import SectionLayout from "../../layouts/SectionLayout.astro";
+
+// component import
+import PortfolioDetails from "./PortfolioDetails.astro";
+
+const {
+    sectionTitle="Portfolio",
+    sectionSubtitle="Mes réalisations"
+} = Astro.props;
+---
+
+<SectionLayout {sectionTitle} {sectionSubtitle}>
+    <PortfolioDetails />
+</SectionLayout>
+
