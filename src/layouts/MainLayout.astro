@@ -2,6 +2,9 @@
 // layout import
 import MainHead from "./MainHead.astro";
 
+// component import
+import Nav from "../components/Nav.astro";
+
 const {
     pageTitle = "Gaëlle Morin - Développeuse web",
     pageDescription = "Développeuse web basée à Bourges",
@@ -11,6 +14,7 @@ const {
 <html lang="en">
 	<MainHead {pageTitle} {pageDescription} />
 	<body>
+        <Nav />
         <main>
             <slot></slot>
         </main>
