@@ -1,0 +1,35 @@
+---
+const {
+href,
+classes,
+text,
+icon,
+style,
+...rest
+} = Astro.props;
+
+if (icon) {
+    const { name, side } = icon;
+}
+---
+
+<a
+    href={href}
+    class:list={[
+        classes,
+        style
+    ]}
+    {...rest}
+>
+{
+    icon && icon.side === "left" && (
+        <i class={'uil-' + icon.name}></i>
+    )
+}
+{text}
+{
+    icon && icon.side === "right" && (
+        <i class={'uil-' + icon.name}></i>
+    )
+}
+</a>

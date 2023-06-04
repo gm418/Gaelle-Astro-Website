@@ -1,4 +1,7 @@
 ---
+// component import
+import Link from "./Link.astro";
+
 // data import
 import navData from "../data/navData";
 ---
@@ -11,10 +14,15 @@ import navData from "../data/navData";
             {
                 navData.map(item => (
                     <li>
-                        <a href={item.url}>
-                            <i class={'uil-' + item.icon}></i>
-                            {item.title}    
-                        </a>
+                        <Link
+                            href={item.url}
+                            style="primary"
+                            icon={{
+                                name: item.icon,
+                                side: "left"
+                            }}
+                            text={item.title}
+                        />
                     </li>
                 ))
             }
