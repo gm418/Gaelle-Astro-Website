@@ -4,6 +4,7 @@ import MainHead from "./MainHead.astro";
 
 // component import
 import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 
 const {
     pageTitle = "Gaëlle Morin - Développeuse web",
@@ -21,5 +22,6 @@ const {
         <main>
             <slot></slot>
         </main>
+        <Footer />
 	</body>
 </html>
