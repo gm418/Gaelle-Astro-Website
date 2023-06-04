@@ -46,7 +46,20 @@ import footerData from "../data/footerData";
             </ul>
 
             <small>
-                // icon sources here
+                &#169; Gaelle. All right reserved <br>
+                Icons by
+                <ul>
+                    {
+                        footerData.iconsSources.map(item => (
+                            <li>
+                                <Link
+                                    href={item.href}
+                                    text={item.title}
+                                />    
+                            </li>
+                        ))
+                    }
+                </ul>
             </small>
         </div>
     
