@@ -29,7 +29,20 @@ import footerData from "../data/footerData";
             </ul>
 
             <ul>
-                // social networks here
+                {
+                    footerData.socialNetworks.map(item => (
+                        <li>
+                            <Link
+                                href={item.href}
+                                icon={{
+                                    name: item.icon,
+                                    side: "left"
+                                }}
+                                text=""
+                            />
+                        </li>
+                    ))
+                }
             </ul>
 
             <small>
