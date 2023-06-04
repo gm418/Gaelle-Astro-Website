@@ -6,62 +6,60 @@ import Link from "./Link.astro";
 import footerData from "../data/footerData";
 ---
 
-<footer>
-    
+<footer>    
+    <div>
         <div>
-            <div>
-                <h2>Gaëlle</h2>
-                <span>Développeuse front-end</span>
-            </div>
+            <h2>Gaëlle</h2>
+            <span>Développeuse front-end</span>
+        </div>
 
+        <ul>
+            {
+                footerData.navLinks.map(item => (
+                    <li>
+                        <Link
+                            href={item.href}
+                            text={item.title}
+                            style="secondary"
+                        />    
+                    </li>
+                ))
+            }
+        </ul>
+
+        <ul>
+            {
+                footerData.socialNetworks.map(item => (
+                    <li>
+                        <Link
+                            href={item.href}
+                            icon={{
+                                name: item.icon,
+                                side: "left"
+                            }}
+                            text=""
+                        />
+                    </li>
+                ))
+            }
+        </ul>
+
+        <small>
+            &#169; Gaelle. All right reserved <br>
+            Icons by
             <ul>
                 {
-                    footerData.navLinks.map(item => (
+                    footerData.iconsSources.map(item => (
                         <li>
                             <Link
                                 href={item.href}
                                 text={item.title}
-                                style="secondary"
                             />    
                         </li>
                     ))
                 }
             </ul>
-
-            <ul>
-                {
-                    footerData.socialNetworks.map(item => (
-                        <li>
-                            <Link
-                                href={item.href}
-                                icon={{
-                                    name: item.icon,
-                                    side: "left"
-                                }}
-                                text=""
-                            />
-                        </li>
-                    ))
-                }
-            </ul>
-
-            <small>
-                &#169; Gaelle. All right reserved <br>
-                Icons by
-                <ul>
-                    {
-                        footerData.iconsSources.map(item => (
-                            <li>
-                                <Link
-                                    href={item.href}
-                                    text={item.title}
-                                />    
-                            </li>
-                        ))
-                    }
-                </ul>
-            </small>
-        </div>
-    
+        </small>
+    </div>
 </footer>
 
