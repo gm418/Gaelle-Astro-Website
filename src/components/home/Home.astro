@@ -1,16 +1,32 @@
 ---
+// component import
+import Link from "../Link.astro";
+
+// data import
+import socialNetworksData from "../../data/socialNetworks"
+
 const { 
     name = "Gaëlle",
     profession = "Développeuse front-end"
 } = Astro.props;
 ---
 
-
 <section>
     <div>
         <div>
             <div>
-
+                <ul>
+                    {
+                        socialNetworksData.map(item => (
+                            <li>
+                                <Link
+                                    href={item.href}
+                                    text={item.title}
+                                />    
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
 
             <div>
