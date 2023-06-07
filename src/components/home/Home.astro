@@ -22,8 +22,12 @@ const {
                             <li>
                                 <Link
                                     href={item.href}
-                                    text={item.title}
-                                />    
+                                    icon={{
+                                        name: item.icon,
+                                        side: "left"
+                                    }}
+                                    text=""
+                                />
                             </li>
                         ))
                     }
