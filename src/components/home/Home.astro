@@ -22,10 +22,7 @@ const {
                             <li>
                                 <Link
                                     href={item.href}
-                                    icon={{
-                                        name: item.icon,
-                                        side: "left"
-                                    }}
+                                    leftIcon={item.icon}
                                     text=""
                                 />
                             </li>
@@ -44,10 +41,7 @@ const {
                 
                 <Link
                     href="#contact"
-                    icon={{
-                        name: "message",
-                        side: "right"
-                    }}
+                    rightIcon="message"
                     text="Me contacter"
                 />
             </div>
@@ -56,14 +50,8 @@ const {
         <div>
             <Link
                 href="#about"
-                icon={{
-                    name: "mouse",
-                    side: "left"
-                }}
-                icon={{
-                    name: "arrow-down",
-                    side: "right"
-                }}
+                leftIcon="mouse"
+                rightIcon="arrow-down"
                 text="Descendre"
             />
             

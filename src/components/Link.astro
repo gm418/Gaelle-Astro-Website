@@ -3,14 +3,11 @@ const {
 href,
 classes,
 text,
-icon,
+leftIcon,
+rightIcon,
 style,
 ...rest
 } = Astro.props;
-
-if (icon) {
-    const { name, side } = icon;
-}
 ---
 
 <a
@@ -22,14 +19,14 @@ if (icon) {
     {...rest}
 >
 {
-    icon && icon.side === "left" && (
-        <i class={'uil-' + icon.name}></i>
+    leftIcon && (
+        <i class={'uil-' + leftIcon}></i>
     )
 }
 {text}
 {
-    icon && icon.side === "right" && (
-        <i class={'uil-' + icon.name}></i>
+    rightIcon && (
+        <i class={'uil-' + rightIcon}></i>
     )
 }
 </a>
