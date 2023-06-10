@@ -196,11 +196,6 @@
     --z-scrollup: 10;
 }
 
-
-body {
-    font-family: var(--body-font);
-}
-
 /* Font size for large devices */
 @media screen and (min-width: 968px) {
     :root {
@@ -212,4 +207,45 @@ body {
         --small-font-size: 1rem; /* 16px */
         --smaller-font-size: .875rem; /* 14px */
     }
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+h1, h2, h3, h4 {
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
 }
