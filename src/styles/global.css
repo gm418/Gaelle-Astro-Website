@@ -163,12 +163,53 @@
 
 /*==================== VARIABLES CSS ====================*/
 :root {
+    --header-height: 3rem;
 
     /*========== Font and typography ==========*/
     --body-font: 'Questrial', sans-serif;
+
+    --big-font-size: 2.5rem;
+    --h1-font-size: 2.1875rem;
+    --h2-font-size: 2.0625rem;
+    --h3-font-size: 1.6875rem;
+    --normal-font-size: 1.063rem;
+    --small-font-size: 0.938rem;
+    --smaller-font-size: 0.813rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 400;
+    --font-semi-bold: 600;
+
+    /*========== Margins ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mar-0-25: .25rem;
+    --mar-0-5: .5rem;
+    --mar-0-75: .75rem;
+    --mar-1: 1rem;
+    --mar-1-5: 1.5rem;
+    --mar-2: 2rem;
+    --mar-2-5: 2.5rem;
+    --mar-3: 3rem;
+
+    /*========== z index ==========*/
+    --z-fixed: 100;
+    --z-scrollup: 10;
 }
 
 
 body {
     font-family: var(--body-font);
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3.5rem; /* 56px */
+        --h1-font-size: 2.9375rem; /* 47px */
+        --h2-font-size: 2.3125rem; /* 37px */
+        --h3-font-size: 1.8125rem; /* 29px */
+        --normal-font-size: 1.125rem; /* 18px */
+        --small-font-size: 1rem; /* 16px */
+        --smaller-font-size: .875rem; /* 14px */
+    }
 }
