@@ -6,11 +6,11 @@ import Link from "./Link.astro";
 import navData from "../data/navData";
 ---
 
-<nav class="nav container">
-    <a href="#">Gaëlle Morin</a>
+<nav class="nav">
+    <a href="#" class="nav__logo">Gaëlle Morin</a>
 
-    <div>
-        <ul>
+    <div class="nav__menu">
+        <ul class="grid nav__list">
             {
                 navData.map(item => (
                     <li>
@@ -28,12 +28,61 @@ import navData from "../data/navData";
     </div>
 
     <div class="nav__btns">
-        <!-- Theme change button -->
-        <i class="uil-moon"></i>
+        <div class="change-theme">
+            <i class="uil-moon"></i>
+        </div>
 
-        <div>
+        <div class="nav__toggle">
             <i class="uil-apps"></i>
         </div>
     </div>
 </nav>
 
+
+<style>
+    .nav {
+        max-width: 968px;
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: var(--mar-1-5);
+        margin-right: var(--mar-1-5);
+    }
+
+    .nav__logo,
+    .nav__toggle,
+    .change-theme {
+        color: var(--title-color);
+    }
+
+    .nav__logo:hover {
+        border-bottom: 1px var(--title-color) solid;
+    }
+
+    .nav__menu {
+        position: fixed;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        left: 0;
+        bottom: -100%;
+        width: 100%;
+        padding: 2em 1.5em 4em;
+        transition: .3s;
+    }
+
+    .nav__btns {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__toggle,
+    .change-theme {
+        font-size: 1.25rem;
+        cursor: pointer;
+    }
+
+    .change-theme {
+        margin-right: var(--mar-1);
+    }
+</style>

@@ -165,6 +165,12 @@
 :root {
     --header-height: 3rem;
 
+    /*========== Colors ==========*/
+    --text-hue: 221;
+
+    /*========== HSL Colors ==========*/
+    --title-color: hsl(var(--text-hue), 39%, 11%);
+
     /*========== Font and typography ==========*/
     --body-font: 'Questrial', sans-serif;
 
@@ -249,3 +255,11 @@ button {
     font-family: inherit;
     font-size: inherit;
 }
+
+/*==================== LAYOUT ====================*/
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+

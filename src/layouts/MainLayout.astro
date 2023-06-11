@@ -18,7 +18,7 @@ const {
 <html lang="en">
 	<MainHead {pageTitle} {pageDescription} />
 	<body>
-        <header>
+        <header id="header">
             <Nav />
         </header>
         
@@ -28,3 +28,15 @@ const {
         <Footer />
 	</body>
 </html>
+
+
+<style>
+    header {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+        background-color: aqua;
+    }
+</style>
