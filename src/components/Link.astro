@@ -5,6 +5,7 @@ classes,
 text,
 leftIcon,
 rightIcon,
+iconClasses,
 style,
 ...rest
 } = Astro.props;
@@ -20,13 +21,13 @@ style,
 >
 {
     leftIcon && (
-        <i class={'uil-' + leftIcon}></i>
+        <i class={'uil-' + leftIcon + (iconClasses ? ' ' + iconClasses : '')}></i>
     )
 }
 {text}
 {
     rightIcon && (
-        <i class={'uil-' + rightIcon}></i>
+        <i class={'uil-' + rightIcon + (iconClasses ? ' ' + iconClasses : '')}></i>
     )
 }
 </a>
@@ -41,6 +42,7 @@ style,
         
     }
 
+    /*========== classes ==========*/
     .nav__link {
         display: flex;
         flex-direction: column;
@@ -51,5 +53,10 @@ style,
 
     .nav__link:hover {
         color: var(--title-color-light);
+    }
+
+    /*========== iconClasses ==========*/
+    .nav__icon {
+        font-size: 1.28em;
     }
 </style>

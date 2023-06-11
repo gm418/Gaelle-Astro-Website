@@ -19,6 +19,7 @@ import navData from "../data/navData";
                             style="primary"
                             classes="nav__link"
                             leftIcon={item.icon}
+                            iconClasses="nav__icon"
                             text={item.title}
                         />
                     </li>
@@ -66,7 +67,7 @@ import navData from "../data/navData";
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
         border-radius: 1.5rem 1.5rem 0 0;
         left: 0;
-        /*bottom: -100%;*/
+        bottom: -100%;
         width: 100%;
         padding: 2em 1.5em 4em;
         transition: .3s;
@@ -92,16 +93,9 @@ import navData from "../data/navData";
         gap: 2rem;
     }
 
-
-
-
-    .nav__icon {
-        font-size: 1.2rem;
-    }
-
     .nav__close {
         cursor: pointer;
-        color: var(--first-color);
+        color: var(--title-color);
         position: absolute;
         right: 1.3rem;
         bottom: .5rem;
@@ -109,7 +103,7 @@ import navData from "../data/navData";
     }
 
     .nav__close:hover {
-        color: var(--first-color-alt);
+        color: var(--title-color-light);
     }
 
     /* Show menu */
