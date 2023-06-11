@@ -10,13 +10,14 @@ import navData from "../data/navData";
     <a href="#" class="nav__logo">Gaëlle Morin</a>
 
     <div class="nav__menu">
-        <ul class="grid nav__list">
+        <ul class="nav__list grid">
             {
                 navData.map(item => (
                     <li>
                         <Link
                             href={item.url}
                             style="primary"
+                            classes="nav__link"
                             leftIcon={item.icon}
                             text={item.title}
                         />
@@ -54,8 +55,10 @@ import navData from "../data/navData";
         color: var(--title-color);
     }
 
-    .nav__logo:hover {
-        border-bottom: 1px var(--title-color) solid;
+    .nav__logo:hover,
+    .nav__toggle:hover,
+    .change-theme:hover {
+        color: var(--title-color-light);
     }
 
     .nav__menu {
@@ -63,7 +66,7 @@ import navData from "../data/navData";
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
         border-radius: 1.5rem 1.5rem 0 0;
         left: 0;
-        bottom: -100%;
+        /*bottom: -100%;*/
         width: 100%;
         padding: 2em 1.5em 4em;
         transition: .3s;
@@ -82,5 +85,35 @@ import navData from "../data/navData";
 
     .change-theme {
         margin-right: var(--mar-1);
+    }
+
+    .nav__list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+
+
+
+    .nav__icon {
+        font-size: 1.2rem;
+    }
+
+    .nav__close {
+        cursor: pointer;
+        color: var(--first-color);
+        position: absolute;
+        right: 1.3rem;
+        bottom: .5rem;
+        font-size: 1.5rem;
+    }
+
+    .nav__close:hover {
+        color: var(--first-color-alt);
+    }
+
+    /* Show menu */
+    .show-menu {
+        bottom: 0;
     }
 </style>

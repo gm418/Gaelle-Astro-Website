@@ -170,6 +170,7 @@
 
     /*========== HSL Colors ==========*/
     --title-color: hsl(var(--text-hue), 39%, 11%);
+    --title-color-light : hsl(var(--text-hue), 39%, 50%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Questrial', sans-serif;
