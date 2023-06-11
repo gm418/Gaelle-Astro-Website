@@ -6,7 +6,7 @@ import Link from "./Link.astro";
 import navData from "../data/navData";
 ---
 
-<nav class="nav">
+<nav class="nav container">
     <a href="#" class="nav__logo">Gaëlle Morin</a>
 
     <div class="nav__menu">
@@ -46,8 +46,6 @@ import navData from "../data/navData";
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-left: var(--mar-1-5);
-        margin-right: var(--mar-1-5);
     }
 
     .nav__logo,
