@@ -5,7 +5,7 @@ const {
 } = Astro.props;
 ---
 
-<section>
+<section class="center">
     <div>
         <h2>{sectionTitle}</h2>
         <span>{sectionSubtitle}</span>
@@ -15,3 +15,33 @@ const {
         </div>
     </div>
 </section>
+
+<style>
+section {
+    background-color: cadetblue;
+    min-height: 100vh;
+    padding: 2rem 0 4rem;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2,
+span {
+    text-align: center;
+    line-height: 1.2em;
+}
+
+.h2 {
+    font-size: var(--h2-font-size);
+}
+
+span {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mar-3);
+}
+</style>
