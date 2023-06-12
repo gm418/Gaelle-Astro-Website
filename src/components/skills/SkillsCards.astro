@@ -3,7 +3,7 @@
 import skillsData from "../../data/skillsData";
 ---
 
-<ul>
+<ul class="container grid">
     {
         skillsData.map(skill => (
             <li>
@@ -13,3 +13,35 @@ import skillsData from "../../data/skillsData";
         ))
     }
 </ul>
+
+
+<style>
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+        padding: 2.5em 1.5em;
+        border-radius: .25rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    }
+
+    li:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+        transition: .3s;
+    }
+
+    i {
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        color: var(--title-color);
+        margin-bottom: var(--mar-1);
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: var(--mar-1);
+    }
+</style>
+
