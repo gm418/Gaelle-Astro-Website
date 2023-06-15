@@ -3,15 +3,71 @@ const { data } = Astro.props;
 ---
 
 <ul>
-  {
-    Object.entries(data).map(([key, value]: [string, any]) => (
-      <li astro-key={key}>
-        <p>{value.studyPeriod || value.employmentPeriod}</p>
-        <h3>{value.title || value.jobTitle}</h3>
-        <p>{value.school || value.company}</p>
-        <p>{value.description}</p>
-      </li>
-    ))
-  }
+    {
+        Object.entries(data).map(([key, value]: [string, any]) => (
+            <li astro-key={key}>
+                <div class="qualification__calendar">
+                    <i class="uil-calendar"></i>
+                    <p>{value.studyPeriod || value.employmentPeriod}</p>
+                </div>
+                <div class="qualification__marker">
+                    <span class="qualification__point"></span>
+                    <span class="qualification__line"></span>
+                </div>
+                <div class="qualification__text">
+                    <h3>{value.title || value.jobTitle}</h3>
+                    <span class="qualification__subtitle">{value.school || value.company}</span>
+                    <p class="qualification__summary">{value.description}</p>
+                </div>
+            </li>
+        ))
+    }
 </ul>
 
+<style>
+    li {
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        gap: 1.5rem;
+    }
+
+    .qualification__calendar {
+        font-size: var(--smaller-font-size);
+        color: var(--title-color);
+    }
+
+    .qualification__point {
+        display: inline-block;
+        height: 13px;
+        width: 13px;
+        border-radius: 50%;
+        background-color: var(--title-color);
+    }
+
+    .qualification__line {
+        display: block;
+        height: 100%;
+        width: 1px;
+        background-color: var(--title-color);
+        transform: translate(6px, -7px);
+    }
+
+    .qualification__text {
+        line-height: 1.2em;
+        padding-bottom: 20px;
+    }
+
+    .qualification__subtitle {
+        display: inline-block;
+        font-size: var(--small-font-size);
+        margin-bottom: var(--mar-1);
+    }
+
+    .qualification__summary {
+        margin-bottom: var(--mar-1);
+    }
+
+    .qualification__content {
+        display: none;
+    }
+</style>

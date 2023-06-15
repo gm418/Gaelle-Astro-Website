@@ -15,8 +15,8 @@ const {
 ---
 
 <SectionLayout {sectionTitle} {sectionSubtitle}>
-<div>
-    <div>
+<div class="container">
+    <div class="qualification__tabs">
         <button>
             <i class="uil-graduation-cap"></i>
             Etudes
@@ -27,11 +27,27 @@ const {
             Travail
         </button>
     </div>
-</div>
 
-<div>
-    <QualificationTimeLine data={qualificationData.education} />
-    <QualificationTimeLine data={qualificationData.workExp} />
+    <div>
+        <QualificationTimeLine data={qualificationData.education} />
+        <QualificationTimeLine data={qualificationData.workExp} />
+    </div>
 </div>
-
 </SectionLayout>
+
+<style>
+    .qualification__tabs {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: var(--mar-2-5);
+    }
+
+    button {
+        font-size: var(--h3-font-size);
+    }
+    
+    i {
+        font-size: 1.8rem;
+        margin-right: var(--mar-0-25);
+    }
+</style>
