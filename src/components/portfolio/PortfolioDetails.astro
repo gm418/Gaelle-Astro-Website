@@ -1,23 +1,30 @@
 ---
 // data import
-import portfolioData from "../../data/portfolioData"
+import portfolioData from "../../data/portfolioData";
+
+let index = 0;
 ---
 
-<div>
-    {
-        Object.entries(portfolioData).map(([key, value]: [string, any]) => (
-            <div astro-key={key}>
-                {
-                    Object.entries(value.images).map(([imageKey, imageValue]: [string, any]) => (
-                        <img src={imageValue} alt="">   
-                    ))
-                }
-                <h3>{value.title}</h3>
-                <div>
-                    {(value.techs).map(tech => <span>{tech}</span>)}
+<div class="portfolio__container container grid">
+    <div class="portfolio__images">
+        <!-- Loop to generate inputs -->
+        {
+            Object.entries(portfolioData).map(([key, value]: [string, any]) => (
+                <input type="radio" name="image" id={'image' + key}>
+            ))
+        }
+
+        {
+            Object.entries(portfolioData).map(([key, value]: [string, any]) => (
+                <div astro-key={key} class={"portfolio__image image_" + key}>
+                    {
+                        
+                        Object.entries(value.images).map(([imageKey, imageValue]: [string, any]) => (
+                            <img src={imageValue} alt="" class={'image' + index++}> 
+                        ))
+                    }   
                 </div>
-                <p>{value.content}</p>    
-            </div>
-        ))
-    }
+            ))
+        }
+    </div>
 </div>
