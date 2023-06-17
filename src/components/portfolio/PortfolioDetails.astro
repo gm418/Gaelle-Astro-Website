@@ -1,30 +1,39 @@
 ---
-// data import
-import portfolioData from "../../data/portfolioData";
-
-let index = 0;
+const allProjects = await Astro.glob("../../content/portfolio/*.md");
 ---
 
-<div class="portfolio__container container grid">
-    <div class="portfolio__images">
-        <!-- Loop to generate inputs -->
-        {
-            Object.entries(portfolioData).map(([key, value]: [string, any]) => (
-                <input type="radio" name="image" id={'image' + key}>
-            ))
-        }
-
-        {
-            Object.entries(portfolioData).map(([key, value]: [string, any]) => (
-                <div astro-key={key} class={"portfolio__image image_" + key}>
+<!--==================== IMAGES ====================-->
+<div>
+    {
+        allProjects.map((project, i) => (
+            <div>
+                <input type="radio" name="image" id={"image" + i}>
+    
+                <div class={"portfolio__image image_" + i}>
                     {
-                        
-                        Object.entries(value.images).map(([imageKey, imageValue]: [string, any]) => (
-                            <img src={imageValue} alt="" class={'image' + index++}> 
+                        (project.frontmatter.images).map((image) => (
+                            <img src={image.src} alt={image.alt}>
                         ))
-                    }   
+                    }
                 </div>
-            ))
-        }
-    </div>
+            </div>
+
+            <div class="portfolio__information">
+                <label for={"image" + i}>
+                    <div class="portfolio__content">
+                        <div class="portfolio__header">
+                            <h3 class="portfolio__title">{project.frontmatter.title}</h3>
+                            <i class="uil-angle-right portfolio__chevron"></i>
+                        </div>
+                        <div class="portfolio__tags">
+                            <span class="portfolio__tag">{project.frontmatter.techs}</span>
+                        </div>
+                        <p class="portfolio__description">
+                            {project.rawContent}
+                        </p>
+                    </div>
+                </label>
+            </div>
+        ))
+    }
 </div>
