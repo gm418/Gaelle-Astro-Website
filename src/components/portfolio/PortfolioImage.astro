@@ -4,8 +4,8 @@ const { images, index } = Astro.props;
 
 <div class={`portfolio__image image_${index + 1}`}>
     {
-        (images).map((image) => (
-            <img src={image.src} alt={image.alt} class={`portfolio__image-${index + 1}`}>
+        (images).map((image, i) => (
+            <img src={image.src} alt={image.alt} class={`portfolio__image-${i + 1}`}>
         ))
     }
 </div>

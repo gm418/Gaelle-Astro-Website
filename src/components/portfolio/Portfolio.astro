@@ -17,25 +17,27 @@ const allProjects = await Astro.glob("../../content/portfolio/*.md");
 ---
 
 <SectionLayout {sectionTitle} {sectionSubtitle}>
-    <div class="portfolio__images">
-        {
-            allProjects.map((project, i) => (
-                <PortfolioInput index={i} />
-                <PortfolioImage images={project.frontmatter.images} index={i} />
-            ))
-        }
-    </div>
-    <div class="portfolio__information">
-        {
-            allProjects.map((project, i) => (
-                <PortfolioContent
-                    title={project.frontmatter.title}
-                    techs={project.frontmatter.techs}
-                    description={project.rawContent}
-                    index={i}
-                />
-            ))
-        }
+    <div class="container grid">
+        <div class="portfolio__images">
+            {
+                allProjects.map((project, i) => (
+                    <PortfolioInput index={i} />
+                    <PortfolioImage images={project.frontmatter.images} index={i} />
+                ))
+            }
+        </div>
+        <div class="portfolio__information">
+            {
+                allProjects.map((project, i) => (
+                    <PortfolioContent
+                        title={project.frontmatter.title}
+                        techs={project.frontmatter.techs}
+                        description={project.rawContent}
+                        index={i}
+                    />
+                ))
+            }
+        </div>
     </div>
 </SectionLayout>
 
