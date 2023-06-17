@@ -1,19 +1,45 @@
 <div>
-    <div>
+    <div class="contact__information">
         <i class="uil-user"></i>
-        <p>Nom</p>
-        <p>Gaëlle Morin</p>
+        <p class="contact__title">Nom</p>
+        <p class="contact__subtitle">Gaëlle Morin</p>
     </div>
 
-    <div>
+    <div class="contact__information">
         <i class="uil-envelope"></i>
-        <p>Email</p>
-        <p>gmorin.dev@gmail.com</p>
+        <p class="contact__title">Email</p>
+        <p class="contact__subtitle">gmorin.dev@gmail.com</p>
     </div>
 
-    <div>
+    <div class="contact__information">
         <i class="uil-map-marker"></i>
-        <p>Ville</p>
-        <p>Bourges</p>
+        <p class="contact__title">Ville</p>
+        <p class="contact__subtitle">Bourges</p>
     </div>
 </div>
+
+<style>
+    .contact__information {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: .20rem .75rem;
+        margin-bottom: var(--mar-2);
+    }
+
+    i {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        font-size: 2rem;
+        color: var(--title-color);
+    }
+
+    .contact__title {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+    }
+
+    .contact__subtitle {
+        color: var(--title-color-light);
+    } 
+</style>
