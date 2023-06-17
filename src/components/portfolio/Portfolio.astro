@@ -17,7 +17,7 @@ const allProjects = await Astro.glob("../../content/portfolio/*.md");
 ---
 
 <SectionLayout {sectionTitle} {sectionSubtitle}>
-    <div class="container grid">
+    <div class="portfolio__container container grid">
         <div class="portfolio__images">
             {
                 allProjects.map((project, i) => (
@@ -41,3 +41,10 @@ const allProjects = await Astro.glob("../../content/portfolio/*.md");
     </div>
 </SectionLayout>
 
+<style>
+    @media screen and (min-width: 768px) {
+        .portfolio__container {
+            grid-template-columns: 50% 1fr;
+        }
+    }
+</style>
