@@ -2,10 +2,43 @@
 const { images, index } = Astro.props;
 ---
 
-<div class={`portfolio__image image_${index + 1}`}>
+<div class={`image_${index + 1}`}>
     {
-        (images).map((image, i) => (
-            <img src={image.src} alt={image.alt} class={`portfolio__image-${i + 1}`}>
+        images.map((image) => (
+            <img src={image.src} alt={image.alt} />
         ))
     }
 </div>
+
+<style>
+    div {
+        position: relative;
+        max-width: 471px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    }
+
+    img:first-child {
+        width: auto;
+    }
+
+    img:nth-child(2) {
+        position: absolute;
+        width: 25%;
+        bottom: 0;
+        right: 1.1rem;
+        z-index: 1;
+    }
+
+    img:nth-child(3) {
+        position: absolute;
+        width: 15%;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+    }
+</style>

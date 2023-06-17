@@ -7,7 +7,7 @@ images: [
         alt: ""
     },
     {
-        src: "/images/mam-tb.jpg",
+        src: "/images/bij-tb.jpg",
         alt: ""
     }
 ]
