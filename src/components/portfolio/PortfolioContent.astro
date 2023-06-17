@@ -5,14 +5,45 @@ const { title, techs, description, index } = Astro.props;
 <label for={`image${index + 1}`}>
     <div class="portfolio__content">
         <div class="portfolio__header">
-            <h3 class="portfolio__title">{title}</h3>
-            <i class="uil-angle-right portfolio__chevron"></i>
+            <h3>{title}</h3>
+            <i class="uil-angle-right"></i>
         </div>
-        <div class="portfolio__tags">
-            <span class="portfolio__tag">{techs}</span>
-        </div>
+
+        <span>{techs}</span>
+
         <p class="portfolio__description">
             {description}
         </p>
     </div>
 </label>
+
+<style>
+.portfolio__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--mar-0-25);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    cursor: pointer;
+    line-height: 1.2em;
+}
+
+i {
+    transform: rotate(-90deg);
+    font-size: 1.5rem;
+    margin-left: 0.25rem;
+}
+
+span {
+    display: block;
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mar-1);
+    line-height: 1.2em;
+}
+
+p {
+    line-height: 1.2em;
+}
+</style>
