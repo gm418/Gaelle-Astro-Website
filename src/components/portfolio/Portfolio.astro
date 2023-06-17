@@ -2,16 +2,40 @@
 // layout import
 import SectionLayout from "../../layouts/SectionLayout.astro";
 
-// component import
-import PortfolioDetails from "./PortfolioDetails.astro";
+// component imports
+import PortfolioInput from "./PortfolioInput.astro";
+import PortfolioImage from "./PortfolioImage.astro";
+import PortfolioContent from "./ProjectContent.astro";
+
 
 const {
     sectionTitle="Portfolio",
     sectionSubtitle="Mes réalisations"
 } = Astro.props;
+
+const allProjects = await Astro.glob("../../content/portfolio/*.md");
 ---
 
 <SectionLayout {sectionTitle} {sectionSubtitle}>
-    <PortfolioDetails />
+    <div class="portfolio__images">
+        {
+            allProjects.map((project, i) => (
+                <PortfolioInput index={i} />
+                <PortfolioImage images={project.frontmatter.images} index={i} />
+            ))
+        }
+    </div>
+    <div class="portfolio__information">
+        {
+            allProjects.map((project, i) => (
+                <PortfolioContent
+                    title={project.frontmatter.title}
+                    techs={project.frontmatter.techs}
+                    description={project.rawContent}
+                    index={i}
+                />
+            ))
+        }
+    </div>
 </SectionLayout>
 
