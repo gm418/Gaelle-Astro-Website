@@ -1,12 +1,12 @@
-<form method="POST">
-    <div>
-        <div>
+<form method="POST" class="grid">
+    <div class="grid">
+        <div class="contact__info">
             <label for="">
                 Votre nom :
                 <input type="text" name="username" id="" required />
             </label>
         </div>
-        <div>
+        <div class="contact__info">
             <label for="">
                 Votre email :
                 <input type="email" name="useremail" id="" required />
@@ -14,13 +14,13 @@
         </div>
     </div>
 
-    <div>
+    <div class="contact__info">
         <label for="">
             votre téléphone (optionnel) :
             <input type="tel" name="userphone" id="" />
         </label>
     </div>
-    <div>
+    <div class="contact__info">
         <label for="">
             Votre message :
             <textarea name="usermessage" id="" cols="0" rows="7" required
@@ -29,6 +29,52 @@
     </div>
 
     <div>
-        <button> Envoyer</button>
+        <button>
+            Envoyer
+            <i class="uil-message button__icon"></i>
+        </button>
     </div>
 </form>
+
+<style>
+    .contact__info {
+        border-radius: .5rem;
+        padding: .75rem 1rem .25rem;
+
+        background-color: antiquewhite;
+    }
+    label {
+        font-size: var(--smaller-font-size);
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        font-family: var(--body-font);
+        font-size: var(--normal-font-size);
+        color: var(--text-title);
+        border: none;
+        outline: none;
+        padding: .25rem .5rem .5rem 0;
+
+        background-color: antiquewhite;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        display: inline-flex;
+        align-items: center;
+        background-color:darkorange;
+        color: #fff;
+        padding: .96em;
+        border-radius: .5rem;
+    }
+
+    button > i {
+        font-size: 1.25rem;
+        margin-left: var(--mar-0-5);
+    }
+</style>
