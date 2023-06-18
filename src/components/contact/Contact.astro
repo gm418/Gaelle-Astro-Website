@@ -13,8 +13,14 @@ const {
 ---
 
 <SectionLayout {sectionTitle} {sectionSubtitle}>
-    <div class="contact__container container grid">
+    <div class="container grid">
         <ContactInfo />
         <ContactForm />
     </div>
 </SectionLayout>
+
+<style>
+    div {
+        grid-template-columns: 1fr 1fr;
+    }
+</style>
