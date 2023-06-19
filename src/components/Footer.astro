@@ -7,13 +7,13 @@ import footerData from "../data/footerData";
 ---
 
 <footer>    
-    <div>
+    <div class="footer__container container grid">
         <div>
             <h2>Gaëlle</h2>
             <span>Développeuse front-end</span>
         </div>
 
-        <ul>
+        <ul class="footer__links">
             {
                 footerData.navLinks.map(item => (
                     <li>
@@ -27,7 +27,7 @@ import footerData from "../data/footerData";
             }
         </ul>
 
-        <ul>
+        <ul class="footer__socials">
             {
                 footerData.socialNetworks.map(item => (
                     <li>
@@ -41,7 +41,7 @@ import footerData from "../data/footerData";
             }
         </ul>
 
-        <small>
+        <small class="footer__copy">
             &#169; Gaelle. All right reserved <br>
             Icons by
             <ul>
@@ -60,3 +60,48 @@ import footerData from "../data/footerData";
     </div>
 </footer>
 
+<style>
+    footer {
+        background-color: black;
+        padding: 2rem 0 3rem;
+    }
+
+    .footer__container {
+        row-gap: 3.5rem;
+    }
+
+    h2,
+    span {
+        color: #FFF;
+    }
+
+    h2 {
+        font-size: var(--h1-font-size);
+        margin-bottom: var(--mar-0-25);
+        line-height: 1;
+    }
+
+    span {
+        font-size: var(--small-font-size);
+    }
+
+    .footer__links {
+        display: grid;
+        row-gap: 1.5rem;
+    }
+
+    .footer__socials {
+        display: flex;
+        gap: var(--mar-1-5);
+    }
+
+    .footer__socials > li {
+        font-size: 1.25rem;
+    }
+
+    .footer__copy {
+        display: block;
+        font-size: var(--smaller-font-size);
+        text-align: center;
+    }
+</style>
