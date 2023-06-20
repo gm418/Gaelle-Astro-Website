@@ -12,11 +12,11 @@ const {
 } = Astro.props;
 ---
 
-<section>
+<section class="center">
     <div>
-        <div>
-            <div>
-                <ul>
+        <div class="home__container container grid">
+            <div class="grid">
+                <ul class="home__social">
                     {
                         socialNetworksData.map(item => (
                             <li>
@@ -39,12 +39,14 @@ const {
                 <h1>Bonjour, je suis {name}</h1>
                 <h2>{profession}</h2>
                 
-                <Link
-                    href="#contact"
-                    classes="filled"
-                    rightIcon="message"
-                    text="Me contacter"
-                />
+                <div class="home__button">
+                    <Link
+                        href="#contact"
+                        classes="filled"
+                        rightIcon="message"
+                        text="Me contacter"
+                    />
+                </div>
             </div>
         </div>
 
@@ -55,7 +57,32 @@ const {
                 rightIcon="arrow-down"
                 text="Descendre"
             />
-            
         </div>
     </div>
 </section>
+
+<style>
+    .home__container {
+        gap: 1rem;
+    }
+
+    .home__social {
+        display: flex;
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: var(--h1-font-size);
+        margin-bottom: var(--mar-0-5);
+    }
+
+    .h2 {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+        margin-bottom: var(--mar-0-75);
+    }
+
+    .home__button {
+        margin-top: var(--mar-2);
+    }
+</style>
