@@ -6,17 +6,13 @@ text,
 leftIcon,
 rightIcon,
 iconClasses,
-style,
 ...rest
 } = Astro.props;
 ---
 
 <a
     href={href}
-    class:list={[
-        classes,
-        style
-    ]}
+    class={classes}
     {...rest}
 >
 {
@@ -39,7 +35,20 @@ style,
     }
 
     .secondary {
-        
+        color: #FFF;
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
+
+    .filled {
+        display: inline-flex;
+        align-items: center;
+        background-color: red;
+        color: #fff;
+        padding: 1em;
+        border-radius: .5rem;
     }
 
     /*========== classes ==========*/
