@@ -1,7 +1,8 @@
 ---
 const {
     sectionTitle,
-    sectionSubtitle
+    sectionSubtitle,
+    color
 } = Astro.props;
 ---
 
@@ -14,7 +15,7 @@ const {
     </div>
 </section>
 
-<style>
+<style define:vars={{ color }}>
 :global(section) {
     min-height: 100vh;
     padding: 2rem 0 4rem;
@@ -32,8 +33,9 @@ span {
     line-height: 1.2em;
 }
 
-.h2 {
+h2 {
     font-size: var(--h2-font-size);
+    color: var(--color);
 }
 
 span {
