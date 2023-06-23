@@ -19,6 +19,7 @@ const {
 <section class="center">
     <div>
         <div class="home__container container grid">
+            
             <div class="grid">
                 <ul class="home__social">
                     {
@@ -35,40 +36,41 @@ const {
                         ))
                     }
                 </ul>
-            </div>
-
-            <div>
-                <Blob {lightColor} />
-            </div>
-
-            <div>
-                <h1>Bonjour, je suis {name}</h1>
-                <h2>{profession}</h2>
                 
-                <div class="home__button">
-                    <Link
-                        href="#contact"
-                        classes="colored filled"
-                        color={darkColor}
-                        bgColor={lightColor}
-                        rightIcon="message"
-                        text="Me contacter"
-                    />
+                <div>
+                    <Blob {lightColor} />
+                </div>
+                
+                <div>
+                    <h1>Bonjour, <br> je suis {name}</h1>
+                    <h2>{profession}</h2>
+                    
+                    <div class="home__button">
+                        <Link
+                            href="#contact"
+                            classes="colored filled button--flex"
+                            color={darkColor}
+                            bgColor={lightColor}
+                            rightIcon="message"
+                            text="Me contacter"
+                        />
+                    </div>
                 </div>
             </div>
+
+            <div>
+                <Link
+                    href="#about"
+                    classes="home__scroll-button button--flex primary"
+                    leftIcon="mouse"
+                    rightIcon="arrow-down"
+                    color={darkColor}
+                    iconClasses="icon-color"
+                    text="Descendre"
+                />
+            </div>
         </div>
 
-        <div>
-            <Link
-                href="#about"
-                classes="primary"
-                leftIcon="mouse"
-                rightIcon="arrow-down"
-                color={darkColor}
-                iconClasses="icon-color"
-                text="Descendre"
-            />
-        </div>
     </div>
 </section>
 

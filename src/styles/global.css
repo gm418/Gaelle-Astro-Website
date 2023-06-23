@@ -271,3 +271,8 @@ button {
     gap: 1.5rem;
 }
 
+.button--flex {
+    display: inline-flex;
+    align-items: center;
+}
+
