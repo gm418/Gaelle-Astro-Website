@@ -6,9 +6,13 @@ import Link from "../Link.astro";
 // data import
 import socialNetworksData from "../../data/socialNetworksData";
 
+
 const { 
     name = "Gaëlle",
-    profession = "Développeuse front-end"
+    profession = "Développeuse front-end",
+    hue = 115,
+    lightColor = `hsl(${hue}, 66%, 82%)`,
+    darkColor = `hsl(${hue}, 100%, 15%)`,
 } = Astro.props;
 ---
 
@@ -24,6 +28,8 @@ const {
                                     href={item.href}
                                     leftIcon={item.icon}
                                     text=""
+                                    color={darkColor}
+                                    classes="colored"
                                 />
                             </li>
                         ))
@@ -32,7 +38,7 @@ const {
             </div>
 
             <div>
-                <Blob />
+                <Blob {lightColor} />
             </div>
 
             <div>
@@ -42,7 +48,9 @@ const {
                 <div class="home__button">
                     <Link
                         href="#contact"
-                        classes="filled"
+                        classes="colored filled"
+                        color={darkColor}
+                        bgColor={lightColor}
                         rightIcon="message"
                         text="Me contacter"
                     />
@@ -53,15 +61,18 @@ const {
         <div>
             <Link
                 href="#about"
+                classes="primary"
                 leftIcon="mouse"
                 rightIcon="arrow-down"
+                color={darkColor}
+                iconClasses="icon-color"
                 text="Descendre"
             />
         </div>
     </div>
 </section>
 
-<style>
+<style define:vars={{ darkColor }}>
     .home__container {
         gap: 1rem;
     }
@@ -74,9 +85,11 @@ const {
     h1 {
         font-size: var(--h1-font-size);
         margin-bottom: var(--mar-0-5);
+        color: var(--darkColor);
+
     }
 
-    .h2 {
+    h2 {
         font-size: var(--h3-font-size);
         font-weight: var(--font-medium);
         margin-bottom: var(--mar-0-75);

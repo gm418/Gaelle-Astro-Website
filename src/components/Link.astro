@@ -2,6 +2,8 @@
 const {
 href,
 classes,
+color,
+bgColor,
 text,
 leftIcon,
 rightIcon,
@@ -29,16 +31,25 @@ iconClasses,
 </a>
 
 
-<style>
+<style define:vars={{ color, bgColor }}>
     i {
         font-size: 1.28em;
     }
+
     .primary {
         color: var(--title-color);
     }
 
     .secondary {
-        color: #FFF;
+        color: #fff;
+    }
+
+    .colored {
+        color: var(--color);
+    }
+
+    .icon-color {
+        color: var(--color);
     }
 
     .underline {
@@ -48,8 +59,7 @@ iconClasses,
     .filled {
         display: inline-flex;
         align-items: center;
-        background-color: red;
-        color: #fff;
+        background-color: var(--bgColor);
         padding: 1em;
         border-radius: .5rem;
     }
