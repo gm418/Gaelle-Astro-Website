@@ -7,10 +7,15 @@ import SkillsCards from "./SkillsCards.astro";
 
 const {
     sectionTitle="Compétences",
-    sectionSubtitle="Je peux me rendre utile"
+    sectionSubtitle="Je peux me rendre utile",
+    hue = 326,
+    lightColor = `hsl(${hue}, 85%, 90%)`,
+    darkColor = `hsl(${hue}, 85%, 45%)`
 } = Astro.props
+
+const color = darkColor;
 ---
 
-<SectionLayout {sectionTitle} {sectionSubtitle}>
-    <SkillsCards />
+<SectionLayout {sectionTitle} {sectionSubtitle} {darkColor}>
+    <SkillsCards {lightColor} {darkColor} />
 </SectionLayout>

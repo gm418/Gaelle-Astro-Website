@@ -1,6 +1,11 @@
 ---
 // data import
 import skillsData from "../../data/skillsData";
+
+const {
+    lightColor,
+    darkColor
+} = Astro.props;
 ---
 
 <ul class="container grid">
@@ -15,7 +20,7 @@ import skillsData from "../../data/skillsData";
 </ul>
 
 
-<style>
+<style define:vars={{ lightColor, darkColor }}>
     ul {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -23,11 +28,11 @@ import skillsData from "../../data/skillsData";
     li {
         padding: 2.5em 1.5em;
         border-radius: .25rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+        box-shadow: 0 2px 4px var(--lightColor);
     }
 
     li:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+        box-shadow: 0 4px 8px var(--lightColor);
         transition: .3s;
     }
 
@@ -35,7 +40,7 @@ import skillsData from "../../data/skillsData";
         display: block;
         text-align: center;
         font-size: 1.5rem;
-        color: var(--title-color);
+        color: var(--darkColor);
         margin-bottom: var(--mar-1);
     }
 
