@@ -10,11 +10,14 @@ import QualificationTimeLine from "./QualificationTimeLine.astro";
 
 const {
     sectionTitle="Expérience",
-    sectionSubtitle="Mon parcours professionnel"
+    sectionSubtitle="Mon parcours professionnel",
+    hue = 16,
+    lightColor = `hsl(${hue}, 100%, 43%)`,
+    darkColor = `hsl(${hue}, 100%, 32%)`
 } = Astro.props
 ---
 
-<SectionLayout {sectionTitle} {sectionSubtitle}>
+<SectionLayout {sectionTitle} {sectionSubtitle} {darkColor} {lightColor}>
 <div class="container">
     <div class="qualification__tabs">
         <button>
@@ -35,7 +38,7 @@ const {
 </div>
 </SectionLayout>
 
-<style>
+<style define:vars={{ lightColor }}>
     .qualification__tabs {
         display: flex;
         justify-content: space-evenly;
@@ -44,6 +47,7 @@ const {
 
     button {
         font-size: var(--h3-font-size);
+        background-color: var(--body-color);
     }
     
     i {

@@ -1,5 +1,9 @@
 ---
-const { data } = Astro.props;
+const {
+    data,
+    lightColor,
+    darkColor
+} = Astro.props;
 ---
 
 <ul>
@@ -24,7 +28,7 @@ const { data } = Astro.props;
     }
 </ul>
 
-<style>
+<style define:vars={{ lightColor, darkColor }}>
     li {
         display: grid;
         grid-template-columns: 1fr max-content 1fr;
@@ -33,7 +37,7 @@ const { data } = Astro.props;
 
     .qualification__calendar {
         font-size: var(--smaller-font-size);
-        color: var(--title-color);
+        color: var(--title-color-light);
     }
 
     .qualification__point {
@@ -41,14 +45,14 @@ const { data } = Astro.props;
         height: 13px;
         width: 13px;
         border-radius: 50%;
-        background-color: var(--title-color);
+        background-color: var(--lightColor);
     }
 
     .qualification__line {
         display: block;
         height: 100%;
         width: 1px;
-        background-color: var(--title-color);
+        background-color: var(--lightColor);
         transform: translate(6px, -7px);
     }
 
@@ -57,9 +61,14 @@ const { data } = Astro.props;
         padding-bottom: 20px;
     }
 
+    h3 {
+        color: var(--darkColor);
+    }
+
     .qualification__subtitle {
         display: inline-block;
         font-size: var(--small-font-size);
+        color: var(--text-color-light);
         margin-bottom: var(--mar-1);
     }
 
