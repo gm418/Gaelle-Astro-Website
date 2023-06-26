@@ -10,13 +10,16 @@ import PortfolioContent from "./PortfolioContent.astro";
 
 const {
     sectionTitle="Portfolio",
-    sectionSubtitle="Mes réalisations"
+    sectionSubtitle="Mes réalisations",
+    hue = 277,
+    lightColor = `hsl(${hue}, 70%, 57%)`,
+    darkColor = `hsl(${hue}, 70%, 35%)`
 } = Astro.props;
 
 const allProjects = await Astro.glob("../../content/portfolio/*.md");
 ---
 
-<SectionLayout {sectionTitle} {sectionSubtitle}>
+<SectionLayout {sectionTitle} {sectionSubtitle} {darkColor} {lightColor}>
     <div class="portfolio__container container grid">
         <div class="portfolio__images">
             {
@@ -30,6 +33,7 @@ const allProjects = await Astro.glob("../../content/portfolio/*.md");
             {
                 allProjects.map((project, i) => (
                     <PortfolioContent
+                        {lightColor}
                         title={project.frontmatter.title}
                         techs={project.frontmatter.techs}
                         description={project.rawContent}
