@@ -1,3 +1,6 @@
+---
+const { darkColor } = Astro.props;
+---
 <div>
     <div class="contact__information">
         <i class="uil-user"></i>
@@ -18,7 +21,7 @@
     </div>
 </div>
 
-<style>
+<style define:vars={{ darkColor }}>
     .contact__information {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -31,7 +34,7 @@
         grid-row-start: 1;
         grid-row-end: 3;
         font-size: 2rem;
-        color: var(--title-color);
+        color: var(--darkColor);
     }
 
     .contact__title {
