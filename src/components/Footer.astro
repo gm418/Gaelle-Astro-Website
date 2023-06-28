@@ -4,6 +4,11 @@ import Link from "./Link.astro";
 
 // data import
 import footerData from "../data/footerData";
+
+const { 
+    hue = 25,
+    bgColor = `hsl(${hue}, 86%, 91%)`
+} = Astro.props;
 ---
 
 <footer>    
@@ -20,7 +25,7 @@ import footerData from "../data/footerData";
                         <Link
                             href={item.href}
                             text={item.title}
-                            classes="secondary"
+                            classes="primary"
                         />    
                     </li>
                 ))
@@ -35,7 +40,7 @@ import footerData from "../data/footerData";
                             href={item.href}
                             leftIcon={item.icon}
                             text=""
-                            classes="secondary"
+                            classes="primary"
                         />
                     </li>
                 ))
@@ -52,7 +57,7 @@ import footerData from "../data/footerData";
                             <Link
                                 href={item.href}
                                 text={item.title}
-                                classes="secondary underline"
+                                classes="primary underline"
                             />    
                         </li>
                     ))
@@ -62,19 +67,14 @@ import footerData from "../data/footerData";
     </div>
 </footer>
 
-<style>
+<style define:vars={{ bgColor }}>
     footer {
-        background-color: black;
+        background-color: var(--bgColor);
         padding: 2rem 0 3rem;
     }
 
     .footer__container {
         row-gap: 3.5rem;
-    }
-
-    h2,
-    span {
-        color: #FFF;
     }
 
     h2 {
