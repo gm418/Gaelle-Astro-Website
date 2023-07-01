@@ -9,7 +9,7 @@ import navData from "../data/navData";
 <nav class="nav container">
     <a href="#" class="nav__logo">Gaëlle Morin</a>
 
-    <div class="nav__menu">
+    <div class="nav__menu" id="js-nav-menu">
         <ul class="nav__list grid">
             {
                 navData.map(item => (
@@ -25,7 +25,7 @@ import navData from "../data/navData";
                 ))
             }
         </ul>
-        <i class="uil-times nav__close"></i>
+        <i class="uil-times nav__close" id="js-nav-close"></i>
     </div>
 
     <div class="nav__btns">
@@ -33,7 +33,7 @@ import navData from "../data/navData";
             <i class="uil-moon"></i>
         </div>
 
-        <div class="nav__toggle">
+        <div class="nav__toggle" id="js-nav-toggle">
             <i class="uil-apps"></i>
         </div>
     </div>
@@ -95,7 +95,6 @@ import navData from "../data/navData";
 
     .nav__close {
         cursor: pointer;
-        
         position: absolute;
         right: 1.3rem;
         bottom: .5rem;
@@ -111,3 +110,5 @@ import navData from "../data/navData";
         bottom: 0;
     }
 </style>
+
+<script src="../scripts/menu-show-hide.js"></script>
