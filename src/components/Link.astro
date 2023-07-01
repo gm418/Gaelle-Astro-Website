@@ -37,15 +37,15 @@ iconClasses,
     }
 
     .primary {
-        color: var(--title-color);
-    }
-
-    .secondary {
-        color: #fff;
+        color: var(--text-color);
     }
 
     .colored {
         color: var(--color);
+    }
+
+    :is(.primary, .colored:not(.filled)):hover {
+        color: var(--text-color-light);
     }
 
     .icon-color {
@@ -57,9 +57,17 @@ iconClasses,
     }
 
     .filled {
-        background-color: var(--bgColor);
+        background: linear-gradient(to right, var(--color) 50%, var(--bgColor) 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
         padding: 1em;
         border-radius: .5rem;
+    }
+
+    .filled:hover {
+        color: var(--bgColor);
+        background-position: left bottom;
     }
 
     .filled i {
@@ -73,10 +81,6 @@ iconClasses,
         align-items: center;
         font-size: var(--small-font-size);
         word-break: break-all;
-    }
-
-    .nav__link:hover {
-        color: var(--text-color-light);
     }
 
     /*========== iconClasses ==========*/
