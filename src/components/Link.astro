@@ -44,7 +44,8 @@ iconClasses,
         color: var(--color);
     }
 
-    :is(.primary, .colored:not(.filled)):hover {
+    :is(.primary, .colored:not(.filled)):hover,
+    :is(.primary, .colored:not(.filled)):focus  {
         color: var(--text-color-light);
     }
 
@@ -65,7 +66,8 @@ iconClasses,
         border-radius: .5rem;
     }
 
-    .filled:hover {
+    .filled:hover,
+    .filled:focus {
         color: var(--bgColor);
         background-position: left bottom;
     }
