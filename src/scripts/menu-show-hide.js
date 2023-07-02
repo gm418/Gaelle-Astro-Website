@@ -1,7 +1,7 @@
 /*==================== SHOW/HIDE MENU ====================*/
 const navToggle = document.getElementById('js-nav-toggle'),
     navClose = document.getElementById('js-nav-close'),
-    navMenu = document.getElementById('js-nav-menu')
+    navMenu = document.getElementById('js-nav-menu');
 
 /*===== MENU SHOW =====*/
 navToggle.addEventListener('click', () => {
