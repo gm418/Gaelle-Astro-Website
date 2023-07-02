@@ -2,11 +2,14 @@
 const {
     data,
     lightColor,
-    darkColor
+    darkColor,
+    classes,
+    id,
+    ariaHidden
 } = Astro.props;
 ---
 
-<ul>
+<ul class={classes} id={id} aria-hidden={ariaHidden}>
     {
         Object.entries(data).map(([key, value]: [string, any]) => (
             <li astro-key={key}>
@@ -78,5 +81,16 @@ const {
 
     .qualification__content {
         display: none;
+    }
+
+    .qualification__content.js-qualification__active {
+        display: block;
+    }
+
+    .qualification__button.js-qualification__active {
+        color: var(--first-color);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-position: under;
     }
 </style>

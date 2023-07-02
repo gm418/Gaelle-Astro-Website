@@ -18,24 +18,33 @@ const {
 ---
 
 <SectionLayout {sectionTitle} {sectionSubtitle} {darkColor} {lightColor}>
-<div class="container">
-    <div class="qualification__tabs">
-        <button>
-            <i class="uil-graduation-cap"></i>
-            Etudes
-        </button>
-        
-        <button>
-            <i class="uil-briefcase-alt"></i>
-            Travail
-        </button>
-    </div>
+    <div class="container">
+        <div class="qualification__tabs">
+            <button class="qualification__button js-qualification__active" aria-controls="#education">
+                <i class="uil-graduation-cap"></i>
+                Etudes
+            </button>
+            
+            <button class="qualification__button" aria-controls="#work">
+                <i class="uil-briefcase-alt"></i>
+                Travail
+            </button>
+        </div>
 
-    <div>
-        <QualificationTimeLine data={qualificationData.education} />
-        <QualificationTimeLine data={qualificationData.workExp} />
+        <div>
+            <QualificationTimeLine
+                data={qualificationData.education}
+                classes="qualification__content js-qualification__active"
+                id="education"
+            />
+            <QualificationTimeLine
+                data={qualificationData.workExp}
+                classes="qualification__content"
+                id="work"
+                ariaHidden="true"
+            />
+        </div>
     </div>
-</div>
 </SectionLayout>
 
 <style define:vars={{ lightColor }}>
@@ -55,3 +64,5 @@ const {
         margin-right: var(--mar-0-25);
     }
 </style>
+
+<script src="../../scripts/qualification-tabs.js"></script>
