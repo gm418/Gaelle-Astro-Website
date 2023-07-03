@@ -12,7 +12,7 @@ const {
 <ul class={classes} id={id} aria-hidden={ariaHidden}>
     {
         Object.entries(data).map(([key, value]: [string, any]) => (
-            <li astro-key={key}>
+            <li class="qualification__data" astro-key={key}>
                 <div class="qualification__calendar">
                     <i class="uil-calendar"></i>
                     <p>{value.studyPeriod || value.employmentPeriod}</p>
@@ -85,5 +85,27 @@ const {
 
     .qualification__content.js-qualification__active {
         display: block;
+    }
+
+    /*==================== ANIMATION ====================*/
+    .qualification__data {
+        animation: fadeIn 0.5s linear;
+        animation-fill-mode: both;
+    }
+
+    .qualification__data:nth-child(1) {
+        animation-delay: .25s;
+    }
+
+    .qualification__data:nth-child(2) {
+        animation-delay: .5s;
+    }
+
+    .qualification__data:nth-child(3) {
+        animation-delay: .75s;
+    }
+
+    .qualification__data:nth-child(4) {
+        animation-delay: 1s;
     }
 </style>
