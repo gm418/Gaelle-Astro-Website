@@ -21,13 +21,11 @@ const {
     <div class="container">
         <div class="qualification__tabs">
             <button class="qualification__button js-qualification__active" aria-controls="#education">
-                <i class="uil-graduation-cap"></i>
-                Etudes
+                <i class="uil-graduation-cap"></i><span>Etudes</span>
             </button>
             
             <button class="qualification__button" aria-controls="#work">
-                <i class="uil-briefcase-alt"></i>
-                Travail
+                <i class="uil-briefcase-alt"></i><span>Travail</span>
             </button>
         </div>
 
@@ -58,10 +56,21 @@ const {
         font-size: var(--h3-font-size);
         background-color: var(--body-color);
     }
+
+    button:hover {
+        color: var(--lightColor);
+    }
+
+    button.js-qualification__active {
+        color: var(--darkColor);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-position: under;
+    }
     
     i {
         font-size: 1.8rem;
-        margin-right: var(--mar-0-25);
+        margin-right: var(--mar-0-5);
     }
 </style>
 
