@@ -3,7 +3,6 @@
 import SectionLayout from "../../layouts/SectionLayout.astro";
 
 // component imports
-import PortfolioInput from "./PortfolioInput.astro";
 import PortfolioImage from "./PortfolioImage.astro";
 import PortfolioContent from "./PortfolioContent.astro";
 
@@ -24,7 +23,6 @@ const allProjects = await Astro.glob("../../content/portfolio/*.md");
         <div class="portfolio__images">
             {
                 allProjects.map((project, i) => (
-                    <PortfolioInput index={i} />
                     <PortfolioImage images={project.frontmatter.images} index={i} />
                 ))
             }

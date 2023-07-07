@@ -2,6 +2,22 @@
 const { images, index } = Astro.props;
 ---
 
+{
+    index + 1 === 1 ?
+    <input
+        type="radio"
+        name="image"
+        id={`image${index + 1}`}
+        checked=true
+    />
+    :
+    <input
+        type="radio"
+        name="image"
+        id={`image${index + 1}`}
+    />
+}
+
 <div class={`image_${index + 1}`}>
     {
         images.map((image) => (
@@ -11,12 +27,16 @@ const { images, index } = Astro.props;
 </div>
 
 <style>
+    input[type=radio] {
+        display: none;
+    }
     div {
         position: relative;
         max-width: 471px;
         margin-left: auto;
         margin-right: auto;
     }
+
 
     img {
         box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
@@ -40,5 +60,21 @@ const { images, index } = Astro.props;
         bottom: 0;
         right: 0;
         z-index: 2;
+    }
+
+    .image_1,
+    .image_2,
+    .image_3,
+    .image_4,
+    .image_5 {
+        display: none;
+    }
+
+    #image1:checked~.image_1,
+    #image2:checked~.image_2,
+    #image3:checked~.image_3,
+    #image4:checked~.image_4,
+    #image5:checked~.image_5 {
+        display: block;
     }
 </style>
