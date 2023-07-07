@@ -45,6 +45,25 @@ span {
 }
 
 p {
+    display: none;
     line-height: 1.2em;
+}
+
+.portfolio__content.js-portfolio__active {
+    margin-bottom: var(--mar-2);
+}
+
+.portfolio__content.js-portfolio__active .portfolio__header {
+    background-color: var(--lightColor);
+    padding-left: 1rem;
+    border-radius: .5rem;
+}
+
+.portfolio__content.js-portfolio__active i {
+    transform: rotate(90deg);
+}
+
+.portfolio__content.js-portfolio__active p {
+    display: block;
 }
 </style>

@@ -11,7 +11,7 @@ const {
     sectionTitle="Portfolio",
     sectionSubtitle="Mes réalisations",
     hue = 277,
-    lightColor = `hsl(${hue}, 70%, 57%)`,
+    lightColor = `hsl(${hue}, 30%, 89%)`,
     darkColor = `hsl(${hue}, 70%, 35%)`
 } = Astro.props;
 
@@ -50,3 +50,5 @@ const allProjects = await Astro.glob("../../content/portfolio/*.md");
         }
     }
 </style>
+
+<script src="../../scripts/portfolio-show-hide.js"></script>
