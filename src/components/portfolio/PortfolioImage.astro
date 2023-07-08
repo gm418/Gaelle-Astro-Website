@@ -2,21 +2,12 @@
 const { images, index } = Astro.props;
 ---
 
-{
-    index + 1 === 1 ?
-    <input
-        type="radio"
-        name="image"
-        id={`image${index + 1}`}
-        checked=true
-    />
-    :
-    <input
-        type="radio"
-        name="image"
-        id={`image${index + 1}`}
-    />
-}
+<input
+    type="radio"
+    name="image"
+    id={`image${index + 1}`}
+    checked={true === (index + 1 === 1)}
+/>
 
 <div class={`image_${index + 1}`}>
     {
