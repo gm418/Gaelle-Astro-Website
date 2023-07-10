@@ -25,5 +25,13 @@ const { lightColor } = Astro.props;
         width: 200px;
         fill: var(--lightColor);
     }
+
+    /*==================== MEDIA QUERIES ====================*/
+    /* For small devices */
+    @media screen and (max-width: 350px) {
+        svg {
+            width: 180px;
+        }
+    }
 </style>
 

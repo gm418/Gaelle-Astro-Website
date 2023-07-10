@@ -109,6 +109,18 @@ import navData from "../data/navData";
     .show-menu {
         bottom: 0;
     }
+
+    /*==================== MEDIA QUERIES ====================*/
+    /* For small devices */
+    @media screen and (max-width: 350px) {
+        .nav__menu {
+            padding-left: .25rem;
+            padding-right: .25rem;
+        }
+        .nav__list {
+            column-gap: .5rem;
+        }
+    }
 </style>
 
 <script src="../scripts/menu-show-hide.js"></script>
