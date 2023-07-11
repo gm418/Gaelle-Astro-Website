@@ -111,4 +111,21 @@ const {
         display: flex;
         justify-content: center;
     }
+
+    /*==================== MEDIA QUERIES ====================*/
+    /* For medium devices */
+    @media screen and (min-width: 568px) {
+
+        .footer__container {
+            grid-template-columns: 1fr 1fr;
+        }
+
+            .footer__socials {
+            grid-column: 1 / 2;
+        }
+        
+        .footer__copy {
+            grid-column: 1 / 3;
+        }
+    }
 </style>

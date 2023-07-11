@@ -20,7 +20,7 @@ const {
     <div>
         <div class="home__container container grid">
             
-            <div class="grid">
+            <div class="home__content grid">
                 <ul class="home__social">
                     {
                         socialNetworksData.map(item => (
@@ -125,5 +125,18 @@ const {
 
     h2 {
         animation: textDown 1s 0.5s ease-in-out both;
+    }
+
+    /*==================== MEDIA QUERIES ====================*/
+    /* For medium devices */
+    @media screen and (min-width: 568px) {
+        .home__content {
+            grid-template-columns: max-content 1fr 1fr;
+            align-items: center;
+        }
+        
+        .home__social {
+            flex-direction: column;
+        }
     }
 </style>

@@ -29,7 +29,7 @@ const {
             </button>
         </div>
 
-        <div>
+        <div class="qualification__contents">
             <QualificationTimeLine
                 data={qualificationData.education}
                 classes="qualification__content js-qualification__active"
@@ -78,6 +78,14 @@ const {
     @media screen and (max-width: 350px) {
         button {
             text-align: center;
+        }
+    }
+
+    /* For medium devices */
+    @media screen and (min-width: 568px) {
+        .qualification__contents {
+            display: grid;
+            justify-content: center;
         }
     }
 </style>
