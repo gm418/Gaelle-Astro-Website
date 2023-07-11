@@ -18,51 +18,51 @@ const { title, techs, description, index, lightColor } = Astro.props;
 </label>
 
 <style define:vars={{ lightColor }}>
-.portfolio__header {
-    display: flex;
-    align-items: center;
-    margin-bottom: var(--mar-0-25);
-}
+    .portfolio__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: var(--mar-0-25);
+    }
 
-h3 {
-    font-size: var(--h3-font-size);
-    cursor: pointer;
-    line-height: 1.2em;
-}
+    h3 {
+        font-size: var(--h3-font-size);
+        cursor: pointer;
+        line-height: 1.2em;
+    }
 
-i {
-    transform: rotate(-90deg);
-    font-size: 1.5rem;
-    margin-left: 0.25rem;
-}
+    i {
+        transform: rotate(-90deg);
+        font-size: 1.5rem;
+        margin-left: 0.25rem;
+    }
 
-span {
-    display: block;
-    font-size: var(--smaller-font-size);
-    margin-bottom: var(--mar-1);
-    line-height: 1.2em;
-    color: var(--text-color-light);
-}
+    span {
+        display: block;
+        font-size: var(--smaller-font-size);
+        margin-bottom: var(--mar-1);
+        line-height: 1.2em;
+        color: var(--text-color-light);
+    }
 
-p {
-    display: none;
-    line-height: 1.2em;
-}
+    p {
+        display: none;
+        line-height: 1.2em;
+    }
 
-.portfolio__content.js-portfolio__active {
-    margin-bottom: var(--mar-2);
-}
+    .portfolio__content.js-portfolio__active {
+        margin-bottom: var(--mar-2);
+    }
 
-.portfolio__content.js-portfolio__active .portfolio__header {
-    background-color: var(--lightColor);
-}
+    .portfolio__content.js-portfolio__active .portfolio__header {
+        background-color: var(--lightColor);
+    }
 
-.portfolio__content.js-portfolio__active i {
-    transform: rotate(90deg);
-}
+    .portfolio__content.js-portfolio__active i {
+        transform: rotate(90deg);
+    }
 
-.portfolio__content.js-portfolio__active p {
-    display: block;
-    animation: fadeIn 1s backwards;
-}
+    .portfolio__content.js-portfolio__active p {
+        display: block;
+        animation: fadeIn 1s backwards;
+    }
 </style>
