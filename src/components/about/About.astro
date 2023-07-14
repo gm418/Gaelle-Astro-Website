@@ -3,6 +3,7 @@
 import SectionLayout from "../../layouts/SectionLayout.astro";
 
 const {
+    id="about",
     sectionTitle="A propos de moi",
     sectionSubtitle="Me, myself and I",
     hue = 216,
@@ -11,7 +12,7 @@ const {
 } = Astro.props;
 ---
 
-<SectionLayout {sectionTitle} {sectionSubtitle} {darkColor}>
+<SectionLayout {id} {sectionTitle} {sectionSubtitle} {darkColor}>
     <p class="container">
         Développeuse junior avec 3 ans d'expérience dans le développement de sites et d'applications web en utilisant HTML5,
         CSS3, JavaScript et des frameworks CSS.

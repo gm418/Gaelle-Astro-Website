@@ -9,6 +9,7 @@ import qualificationData from "../../data/qualificationData";
 import QualificationTimeLine from "./QualificationTimeLine.astro";
 
 const {
+    id="qualification",
     sectionTitle="Expérience",
     sectionSubtitle="Mon parcours professionnel",
     hue = 16,
@@ -17,7 +18,7 @@ const {
 } = Astro.props
 ---
 
-<SectionLayout {sectionTitle} {sectionSubtitle} {darkColor} {lightColor}>
+<SectionLayout {id} {sectionTitle} {sectionSubtitle} {darkColor} {lightColor}>
     <div class="container">
         <div class="qualification__buttons">
             <button class="qualification__button js-qualification__active" aria-controls="#education">

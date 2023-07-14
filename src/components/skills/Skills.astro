@@ -6,6 +6,7 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
 import SkillsCards from "./SkillsCards.astro";
 
 const {
+    id="skills",
     sectionTitle="Compétences",
     sectionSubtitle="Je peux me rendre utile",
     hue = 336,
@@ -16,6 +17,6 @@ const {
 const color = darkColor;
 ---
 
-<SectionLayout {sectionTitle} {sectionSubtitle} {darkColor}>
+<SectionLayout {id} {sectionTitle} {sectionSubtitle} {darkColor}>
     <SkillsCards {lightColor} {darkColor} />
 </SectionLayout>

@@ -7,6 +7,7 @@ import ContactForm from "./ContactForm.astro";
 import ContactInfo from "./ContactInfo.astro";
 
 const {
+    id="contact",
     sectionTitle="Un projet ?",
     sectionSubtitle="Parlons-en",
     hue = 180,
@@ -15,7 +16,7 @@ const {
 } = Astro.props;
 ---
 
-<SectionLayout {sectionTitle} {sectionSubtitle} {darkColor}>
+<SectionLayout {id} {sectionTitle} {sectionSubtitle} {darkColor}>
     <div class="container grid">
         <ContactInfo {darkColor} />
         <ContactForm {darkColor} {lightColor} />

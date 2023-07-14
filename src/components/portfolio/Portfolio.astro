@@ -8,6 +8,7 @@ import PortfolioContent from "./PortfolioContent.astro";
 
 
 const {
+    id="portfolio",
     sectionTitle="Portfolio",
     sectionSubtitle="Mes réalisations",
     hue = 277,
@@ -18,7 +19,7 @@ const {
 const allProjects = await Astro.glob("../../content/portfolio/*.md");
 ---
 
-<SectionLayout {sectionTitle} {sectionSubtitle} {darkColor} {lightColor}>
+<SectionLayout {id} {sectionTitle} {sectionSubtitle} {darkColor} {lightColor}>
     <div class="portfolio__container container grid">
         <div class="portfolio__images">
             {

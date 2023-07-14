@@ -1,12 +1,13 @@
 ---
 const {
+    id,
     sectionTitle,
     sectionSubtitle,
     darkColor
 } = Astro.props;
 ---
 
-<section class="center">
+<section id={id} class="center">
     <div>
         <h2>{sectionTitle}</h2>
         <span>{sectionSubtitle}</span>
