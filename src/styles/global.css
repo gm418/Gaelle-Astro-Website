@@ -323,3 +323,10 @@ button {
         margin-right: auto;
     }
 }
+
+/* For extra-large devices */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1040px;
+    }
+}

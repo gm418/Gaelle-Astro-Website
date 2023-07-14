@@ -37,7 +37,7 @@ const {
                     }
                 </ul>
                 
-                <div>
+                <div class="home__img">
                     <Blob {lightColor} />
                 </div>
                 
@@ -134,6 +134,10 @@ const {
             grid-template-columns: max-content 1fr 1fr;
             align-items: center;
         }
+
+        .home__img {
+            order: 1;
+        }
         
         .home__social {
             flex-direction: column;
@@ -161,6 +165,13 @@ const {
 
         .home__scroll-button {
             margin-left: 3rem;
+        }
+    }
+
+    /* For extra-large devices */
+    @media screen and (min-width: 1024px) {
+        .home__social {
+            transform: translateX(-6rem);
         }
     }
 </style>

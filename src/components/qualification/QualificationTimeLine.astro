@@ -143,4 +143,21 @@ const {
             text-align: end;
         }
     }
+
+    /* For extra-large devices */
+    @media screen and (min-width: 1024px) {
+        .qualification__data:nth-child(even) .qualification__calendar {
+            order: 2;
+            text-align: left;
+        }
+
+        .qualification__data:nth-child(even) .qualification__marker {
+            order: 1;
+        }
+        
+        .qualification__data:nth-child(even) .qualification__text {
+            order: 0;
+            text-align: right;
+        }
+    }
 </style>

@@ -3,27 +3,29 @@ const { darkColor, lightColor } = Astro.props;
 ---
 
 <form method="POST" class="grid">
-    <div class="grid">
-        <div class="contact__info">
-            <label for="">
-                Votre nom :
-                <input type="text" name="username" id="" required />
-            </label>
-        </div>
+    <div class="contact__info">
+        <label for="">
+            Votre nom :
+            <input type="text" name="username" id="" required />
+        </label>
+    </div>
+    
+    <div class="contact__inputs grid">
         <div class="contact__info">
             <label for="">
                 Votre email :
                 <input type="email" name="useremail" id="" required />
             </label>
         </div>
+        
+        <div class="contact__info">
+            <label for="">
+                votre téléphone (optionnel) :
+                <input type="tel" name="userphone" id="" />
+            </label>
+        </div>
     </div>
 
-    <div class="contact__info">
-        <label for="">
-            votre téléphone (optionnel) :
-            <input type="tel" name="userphone" id="" />
-        </label>
-    </div>
     <div class="contact__info">
         <label for="">
             Votre message :
@@ -78,5 +80,15 @@ const { darkColor, lightColor } = Astro.props;
     button > i {
         font-size: 1.25rem;
         margin-left: var(--mar-0-5);
+    }
+
+    /* For extra-large devices */
+    @media screen and (min-width: 1024px) {
+        .contact__form {
+            width: 460px;
+        }
+        .contact__inputs {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 </style>
