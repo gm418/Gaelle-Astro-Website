@@ -139,4 +139,28 @@ const {
             flex-direction: column;
         }
     }
+
+    /* For large devices */
+    @media screen and (min-width: 768px) {
+        .home__container {
+            row-gap: 5rem;
+        }
+
+        .home__content {
+            column-gap: 2rem;
+            padding-top: 5.5rem;
+        }
+
+        .home__social {
+            gap: 1.5rem;
+        }
+
+        h1 {
+            margin-bottom: var(--mar-1);
+        }
+
+        .home__scroll-button {
+            margin-left: 3rem;
+        }
+    }
 </style>

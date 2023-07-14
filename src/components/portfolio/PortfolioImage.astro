@@ -68,4 +68,20 @@ const { images, index } = Astro.props;
     #image5:checked~.image_5 {
         display: block;
     }
+
+    /*==================== MEDIA QUERIES ====================*/
+    /* For large devices */
+    @media screen and (min-width: 768px) {
+        [class^="image_"] {
+            height: 18.3rem;
+        }
+
+        img:first-child {
+            position: absolute;
+            bottom: 0;
+        }
+        img:nth-child(2) {
+            right: 3.1rem;
+        }
+    }
 </style>
