@@ -1,5 +1,5 @@
 const navData = [
-    {title: "Accueil", url: "#", icon: "estate"},
+    {title: "Accueil", url: "#home", icon: "estate"},
     {title: "A propos", url: "#about", icon: "user"},
     {title: "Compétences", url: "#skills", icon: "file-alt"},
     {title: "Expérience", url: "#qualification", icon: "briefcase-alt"},
