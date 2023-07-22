@@ -50,20 +50,21 @@ const {
     
             <small class="footer__copy">
                 &#169; Gaelle. All right reserved <br>
-                Icons by
-                <ul>
-                    {
-                        footerData.iconsSources.map(item => (
-                            <li>
-                                <Link
-                                    href={item.href}
-                                    text={item.title}
-                                    classes="primary underline"
-                                />   
-                            </li>
-                        ))
-                    }
-                </ul>
+                Icônes par
+
+                {
+                    footerData.iconsSources.map((icon, index) => {
+                        const isLast = index === footerData.iconsSources.length - 1;
+                        const separator = isLast ? ' sur ' : ', ';
+
+                        return (
+                            <>
+                                {index !== 0 && separator}
+                                <Link classes="primary underline" href={icon.href} text={icon.title} />
+                            </>
+                        );
+                    })
+                }
             </small>
         </div>
     </div>   
