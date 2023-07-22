@@ -49,7 +49,7 @@ const {
             </ul>
     
             <small class="footer__copy">
-                &#169; Gaelle. All right reserved <br>
+                &#169; Gaelle <span id="js-copyright"></span>. All rights reserved <br>
                 Icônes par
 
                 {
@@ -86,7 +86,7 @@ const {
         line-height: 1;
     }
 
-    span {
+    h2 + span {
         font-size: var(--small-font-size);
     }
 
@@ -157,3 +157,10 @@ const {
         }
     }
 </style>
+
+<script>
+    document.querySelector("#js-copyright").textContent = 
+    new Date()
+        .getFullYear()
+        .toString();
+</script>
