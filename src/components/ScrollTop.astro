@@ -1,0 +1,32 @@
+<a href="#" class="scrolltop" id="js-scroll-top">
+    <i class="uil-arrow-up scrolltop__icon"></i>
+</a>
+
+<style>
+    .scrolltop {
+        position: fixed;
+        z-index: var(--z-scrolltop);
+        bottom: -50%;
+        right: 1rem;
+        background-color: var(--text-color);
+        border-radius: .4rem;
+        padding: .3rem;
+        opacity: .8;
+        transition: .4s;
+    }
+
+    .scrolltop:hover {
+        background-color: var(--text-color-light);
+    }
+
+    .scrolltop__icon {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .show-scrolltop {
+        bottom: 4rem;
+    }
+</style>
+
+<script src="../scripts/scroll-top.js"></script>

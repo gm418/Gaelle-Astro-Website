@@ -201,7 +201,7 @@
 
     /*========== z index ==========*/
     --z-fixed: 100;
-    --z-scrollup: 10;
+    --z-scrolltop: 10;
 }
 
 /* Font size for large devices */
