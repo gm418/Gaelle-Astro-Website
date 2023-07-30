@@ -14,7 +14,7 @@ const {
         Object.entries(data).map(([key, value]: [string, any]) => (
             <li class="qualification__data" astro-key={key}>
                 <div class="qualification__calendar">
-                    <i class="uil-calendar"></i>
+                    <i class="uil-calendar" aria-hidden="true"></i>
                     <p>{value.studyPeriod || value.employmentPeriod}</p>
                 </div>
                 <div class="qualification__marker">
