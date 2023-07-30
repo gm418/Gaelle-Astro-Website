@@ -4,38 +4,38 @@ const { darkColor, lightColor } = Astro.props;
 
 <form method="POST" class="grid">
     <div class="contact__info">
-        <label for="">
-            Votre nom :
-            <input type="text" name="username" id="" required />
+        <label for="name">
+            Votre nom (obligatoire) :
+            <input type="text" name="username" id="name" autocomplete="name" required aria-required="true" />
         </label>
     </div>
     
     <div class="contact__inputs grid">
         <div class="contact__info">
-            <label for="">
-                Votre email :
-                <input type="email" name="useremail" id="" required />
+            <label for="email">
+                Votre email (obligatoire) :
+                <input type="email" name="useremail" id="email" autocomplete="email" required aria-required="true" />
             </label>
         </div>
         
         <div class="contact__info">
-            <label for="">
+            <label for="tel">
                 votre téléphone (optionnel) :
-                <input type="tel" name="userphone" id="" />
+                <input type="tel" name="userphone" id="tel" autocomplete="tel" />
             </label>
         </div>
     </div>
 
     <div class="contact__info">
-        <label for="">
-            Votre message :
-            <textarea name="usermessage" id="" cols="0" rows="7" required
+        <label for="message">
+            Votre message (obligatoire) :
+            <textarea name="usermessage" id="message" cols="0" rows="7" required aria-required="true"
             ></textarea>
         </label>
     </div>
 
     <div>
-        <button>
+        <button type="submit">
             Envoyer
             <i class="uil-message button__icon"></i>
         </button>
