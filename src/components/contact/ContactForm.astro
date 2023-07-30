@@ -6,7 +6,7 @@ const { darkColor, lightColor } = Astro.props;
     <div class="contact__info">
         <label for="name">
             Votre nom (obligatoire) :
-            <input type="text" name="username" id="name" autocomplete="name" required aria-required="true" />
+            <input type="text" name="username" id="name" autocomplete="name" required />
         </label>
     </div>
     
@@ -14,7 +14,7 @@ const { darkColor, lightColor } = Astro.props;
         <div class="contact__info">
             <label for="email">
                 Votre email (obligatoire) :
-                <input type="email" name="useremail" id="email" autocomplete="email" required aria-required="true" />
+                <input type="email" name="useremail" id="email" autocomplete="email" required />
             </label>
         </div>
         
@@ -29,7 +29,7 @@ const { darkColor, lightColor } = Astro.props;
     <div class="contact__info">
         <label for="message">
             Votre message (obligatoire) :
-            <textarea name="usermessage" id="message" cols="0" rows="7" required aria-required="true"
+            <textarea name="usermessage" id="message" cols="0" rows="7" required
             ></textarea>
         </label>
     </div>
