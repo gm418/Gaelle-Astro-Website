@@ -9,6 +9,7 @@ ariaLabel,
 leftIcon,
 rightIcon,
 iconClasses,
+ariaHidden,
 ...rest
 } = Astro.props;
 ---
@@ -21,13 +22,13 @@ iconClasses,
 >
 {
     leftIcon && (
-        <i class={'uil-' + leftIcon + (iconClasses ? ' ' + iconClasses : '')}></i>
+        <i class={'uil-' + leftIcon + (iconClasses ? ' ' + iconClasses : '')} aria-hidden={ariaHidden}></i>
     )
 }
 {text}
 {
     rightIcon && (
-        <i class={'uil-' + rightIcon + (iconClasses ? ' ' + iconClasses : '')}></i>
+        <i class={'uil-' + rightIcon + (iconClasses ? ' ' + iconClasses : '')} aria-hidden={ariaHidden}></i>
     )
 }
 </a>
