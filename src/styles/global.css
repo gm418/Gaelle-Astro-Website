@@ -257,6 +257,9 @@ button {
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
+    touch-action: manipulation; /* for a fast reacting touch experience */
+    -webkit-tap-highlight-color: transparent; /* To remove the semi-transparent highlight iOS applies to buttons */
+    outline-offset: 5px; /* To give the focus state outline some breathing room from the edge of the element */
 }
 
 /*==================== LAYOUT ====================*/

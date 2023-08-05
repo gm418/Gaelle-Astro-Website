@@ -30,9 +30,15 @@ import navData from "../data/navData";
     </div>
 
     <div class="nav__btns">
-        <div class="change-theme">
-            <i class="uil-moon"></i>
-        </div>
+        <button
+            class="change-theme"
+            id="js-change-theme"
+            title="switch mode sombre ou clair"
+            aria-label="auto"
+            aria-live="polite"
+        >
+            <i class="uil-moon" aria-hidden="true" ></i>
+        </button>
 
         <div class="nav__toggle" id="js-nav-toggle">
             <i class="uil-apps"></i>
@@ -71,6 +77,10 @@ import navData from "../data/navData";
     .change-theme {
         font-size: 1.25rem;
         cursor: pointer;
+
+        @media (hover: none) {
+            font-size: 48px;
+        }
     }
 
     .change-theme {
