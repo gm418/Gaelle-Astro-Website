@@ -4,14 +4,14 @@ const { title, techs, description, index, lightColor } = Astro.props;
  
 <label for={`image${index + 1}`}>
     <div class={index + 1 === 1 ? "portfolio__content js-portfolio__active" : "portfolio__content"}>
-        <div class="portfolio__header">
-            <h3>{title}</h3>
+        <button class="portfolio__header" aria-controls={`project-${index + 1}`} aria-expanded={index + 1 === 1 ? "true" : "false"}>
+            {title}
             <i class="uil-angle-right" aria-hidden="true"></i>
-        </div>
+        </button>
 
         <span>{techs}</span>
 
-        <p class="portfolio__description">
+        <p id={`project-${index + 1}`} class="portfolio__description">
             {description}
         </p>
     </div>
