@@ -20,12 +20,12 @@ const {
 
 <SectionLayout {id} {sectionTitle} {sectionSubtitle} {darkColor} {lightColor}>
     <div class="container">
-        <div class="qualification__buttons">
-            <button class="qualification__button js-qualification__active" aria-controls="#education">
+        <div class="qualification__buttons" role="tablist" aria-label="Sections du CV">
+            <button class="qualification__button js-qualification__active" role="tab" aria-selected="true" aria-controls="#education">
                 <i class="uil-graduation-cap" aria-hidden="true"></i><span>Etudes</span>
             </button>
             
-            <button class="qualification__button" aria-controls="#work">
+            <button class="qualification__button" role="tab" aria-selected="false" aria-controls="#work">
                 <i class="uil-briefcase-alt" aria-hidden="true"></i><span>Travail</span>
             </button>
         </div>
@@ -35,11 +35,13 @@ const {
                 data={qualificationData.education}
                 classes="qualification__content js-qualification__active"
                 id="education"
+                role="tabpanel"
             />
             <QualificationTimeLine
                 data={qualificationData.workExp}
                 classes="qualification__content"
                 id="work"
+                role="tabpanel"
                 ariaHidden="true"
             />
         </div>
