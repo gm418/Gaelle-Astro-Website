@@ -246,6 +246,25 @@ a {
     text-decoration: none;
 }
 
+:is(a, button):focus-visible {
+    /* Draw the focus when :focus-visible is supported */
+    outline: 3px solid black;
+    outline-offset: 4px;
+}
+
+@supports not selector(:focus-visible) {
+    :is(a, button):focus {
+        /* Fallback for browsers without :focus-visible support */
+        outline: 3px solid black;
+        outline-offset: 4px;
+    }
+}
+
+div:has(>label>:is(input, textarea):focus) {
+outline: 3px solid black;
+    outline-offset: 4px;
+}
+
 img {
     max-width: 100%;
     height: auto;
