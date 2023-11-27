@@ -1,5 +1,5 @@
 ---
-const { title, techs, description, index, lightColor } = Astro.props;
+const { title, techs, description, index } = Astro.props;
 ---
  
 <label for={`image${index + 1}`}>
@@ -17,7 +17,7 @@ const { title, techs, description, index, lightColor } = Astro.props;
     </div>
 </label>
 
-<style define:vars={{ lightColor }}>
+<style>
     .portfolio__header {
         display: flex;
         align-items: center;
@@ -53,7 +53,7 @@ const { title, techs, description, index, lightColor } = Astro.props;
     }
 
     .portfolio__content.js-portfolio__active .portfolio__header {
-        background-color: var(--lightColor);
+        background-color: var(--primary-color);
     }
 
     .portfolio__content.js-portfolio__active i {
