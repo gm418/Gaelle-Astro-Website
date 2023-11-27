@@ -28,9 +28,9 @@ const {
                                 <Link
                                     href={item.href}
                                     leftIcon={item.icon}
+                                    iconClasses="colored-icon"
                                     ariaLabel={item.textAlternative}
-                                    color={darkColor}
-                                    classes="colored block"
+                                    classes="block"
                                 />
                             </li>
                         ))
@@ -48,9 +48,7 @@ const {
                     <div class="home__button">
                         <Link
                             href="#contact"
-                            classes="colored filled button--flex"
-                            color={darkColor}
-                            bgColor={lightColor}
+                            classes="button-primary button--flex icon-left"
                             rightIcon="message"
                             ariaHidden="true"
                             text="Me contacter"
@@ -62,17 +60,14 @@ const {
             <div>
                 <Link
                     href="#about"
-                    classes="home__scroll-button button--flex primary"
+                    classes="home__scroll-button button--flex"
                     leftIcon="mouse"
                     rightIcon="arrow-down"
-                    color={darkColor}
-                    iconClasses="icon-color"
                     ariaHidden="true"
                     text="Descendre"
                 />
             </div>
         </div>
-
     </div>
 </section>
 

@@ -169,9 +169,18 @@
     --text-hue: 221;
 
     /*========== HSL Colors ==========*/
-    --text-color: hsl(var(--text-hue), 39%, 11%);
-    --text-color-light: hsl(var(--text-hue), 0%, 31%);
-    --body-color: #FFF;
+    /*--text-color: hsl(var(--text-hue), 39%, 11%);*/
+    /*--text-color-light: hsl(var(--text-hue), 0%, 31%);*/
+    /*--body-color: #FFF;*/
+
+    --bg-colored: hsl(30, 30%, 96%);
+    --bg-light: hsl(60, 100%, 100%);
+    --title-color: hsl(0, 0%, 5%);
+    --text-color: hsl(0, 0%, 16%);
+    --primary-color: hsl(25, 100%, 62%);
+    --primary-color-lt: hsl(25, 66%, 82%);
+    --secondary-color: hsl(340, 68%, 53%);
+
 
     /*========== Font and typography ==========*/
     --body-font: 'Questrial', sans-serif;
@@ -236,6 +245,7 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: var(--font-semi-bold);
+    color: var(--title-color);
 }
 
 ul {

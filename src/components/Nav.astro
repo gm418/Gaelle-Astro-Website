@@ -7,7 +7,7 @@ import navData from "../data/navData";
 ---
 
 <div class="nav container">
-    <a href="#" class="nav__logo">Gaëlle Morin</a>
+    <p class="nav__logo">Gaëlle Morin</p>
 
     <button class="nav__toggle" id="js-nav-toggle" aria-expanded="false" aria-label="Menu" aria-controls="js-nav-menu">
         <i class="uil-apps" aria-hidden="true"></i>
@@ -20,7 +20,7 @@ import navData from "../data/navData";
                     <li>
                         <Link
                             href={item.url}
-                            classes="nav__link primary"
+                            classes="nav__link"
                             leftIcon={item.icon}
                             ariaHidden="true"
                             iconClasses="nav__icon"
@@ -54,18 +54,6 @@ import navData from "../data/navData";
         align-items: center;
     }
 
-    .nav__logo,
-    .nav__toggle,
-    .change-theme {
-        color: var(--text-color);
-    }
-
-    .nav__logo:hover,
-    .nav__toggle:hover,
-    .change-theme:hover {
-        color: var(--text-color-light);
-    }
-
     .nav__toggle,
     .change-theme {
         font-size: 1.25rem;
@@ -97,10 +85,6 @@ import navData from "../data/navData";
         font-size: 1.5rem;
     }
 
-    .nav__close:hover {
-        color: var(--text-color-light);
-    }
-
     /*==================== MEDIA QUERIES ====================*/
     /* For small devices */
     @media screen and (max-width: 350px) {
@@ -124,7 +108,6 @@ import navData from "../data/navData";
             width: 100%;
             padding: 2em 1.5em 4em;
             transition: .3s;
-            background-color: var(--body-color);
         }
 
         /* Show menu on mobile phone */

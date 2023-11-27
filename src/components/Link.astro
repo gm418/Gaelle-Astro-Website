@@ -2,14 +2,12 @@
 const {
 href,
 classes,
-color,
-bgColor,
 text,
 ariaLabel,
+ariaHidden,
 leftIcon,
 rightIcon,
 iconClasses,
-ariaHidden,
 ...rest
 } = Astro.props;
 ---
@@ -34,34 +32,25 @@ ariaHidden,
 </a>
 
 
-<style define:vars={{ color, bgColor }}>
+<style>
+    a {
+        color: var(--text-color);
+    }
+
     i {
         font-size: 1.28em;
     }
 
-    .primary {
+    .colored-icon {
+        color: var(--secondary-color);
+    }
+
+    .colored-icon:is(:hover, :focus) {
         color: var(--text-color);
     }
 
-    .colored {
-        color: var(--color);
-    }
-
-    :is(.primary, .colored:not(.filled)):hover,
-    :is(.primary, .colored:not(.filled)):focus  {
-        color: var(--text-color-light);
-    }
-
-    .icon-color {
-        color: var(--color);
-    }
-
-    .underline {
-        text-decoration: underline;
-    }
-
-    .filled {
-        background: linear-gradient(to right, var(--color) 50%, var(--bgColor) 50%);
+    .button-primary {
+        background: linear-gradient(to right, var(--primary-color-lt) 50%, var(--primary-color) 50%);
         background-size: 202% 100%;
         background-position: right bottom;
         transition: all .5s ease-out;
@@ -69,13 +58,17 @@ ariaHidden,
         border-radius: .5rem;
     }
 
-    .filled:hover,
-    .filled:focus {
+    .button-primary:hover,
+    .button-primary:focus {
         color: var(--bgColor);
         background-position: left bottom;
     }
 
-    .filled i {
+    .underline {
+        text-decoration: underline;
+    }
+
+    .icon-left i {
         margin-left: var(--mar-0-5);
     }
 
@@ -93,7 +86,6 @@ ariaHidden,
     }
 
     .js-active-link {
-        color: var(--text-color-light);
         text-decoration: underline;
     }  
 
