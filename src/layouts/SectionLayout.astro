@@ -3,11 +3,11 @@ const {
     id,
     sectionTitle,
     sectionSubtitle,
-    darkColor
+    background
 } = Astro.props;
 ---
 
-<section id={id} class="center">
+<section id={id} class={'center ' + background}>
     <div>
         <h2>{sectionTitle}</h2>
         <span>{sectionSubtitle}</span>
@@ -16,7 +16,7 @@ const {
     </div>
 </section>
 
-<style define:vars={{ darkColor }}>
+<style>
     :global(section) {
         min-height: 100vh;
         padding: 2rem 0 4rem;
@@ -36,7 +36,6 @@ const {
 
     h2 {
         font-size: var(--h2-font-size);
-        color: var(--darkColor);
     }
 
     span {
