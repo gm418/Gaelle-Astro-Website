@@ -9,9 +9,11 @@ const {
     id="skills",
     sectionTitle="Compétences",
     sectionSubtitle="Je peux me rendre utile",
+    background="bg-colored",
+    backgroundLight="bg-light"
 } = Astro.props
 ---
 
-<SectionLayout {id} {sectionTitle} {sectionSubtitle}>
-    <SkillsCards />
+<SectionLayout {id} {sectionTitle} {sectionSubtitle} {background}>
+    <SkillsCards {backgroundLight} />
 </SectionLayout>

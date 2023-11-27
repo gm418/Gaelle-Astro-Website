@@ -1,12 +1,14 @@
 ---
 // data import
 import skillsData from "../../data/skillsData";
+
+const { backgroundLight } = Astro.props
 ---
 
 <ul class="container grid">
     {
         skillsData.map(skill => (
-            <li class="bg-colored">
+            <li class={backgroundLight}>
                 <i class={'uil-' + skill.icon} aria-hidden="true"></i>
                 <p>{skill.name}</p>   
             </li>

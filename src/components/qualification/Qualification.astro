@@ -11,12 +11,11 @@ import QualificationTimeLine from "./QualificationTimeLine.astro";
 const {
     id="qualification",
     sectionTitle="Expérience",
-    sectionSubtitle="Mon parcours professionnel",
-    background="bg-colored"
+    sectionSubtitle="Mon parcours professionnel"
 } = Astro.props
 ---
 
-<SectionLayout {id} {sectionTitle} {sectionSubtitle} {background}>
+<SectionLayout {id} {sectionTitle} {sectionSubtitle}>
     <div class="container">
         <div class="qualification__buttons" role="tablist" aria-label="Sections du CV">
             <button class="qualification__button js-qualification__active" role="tab" aria-selected="true" aria-controls="#education">

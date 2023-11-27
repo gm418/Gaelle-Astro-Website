@@ -295,6 +295,10 @@ button {
     background-color: var(--bg-colored);
 }
 
+.bg-light {
+    background-color: var(--bg-light);
+}
+
 /*==================== LAYOUT ====================*/
 .container {
     max-width: 768px;

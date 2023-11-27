@@ -10,13 +10,14 @@ import PortfolioContent from "./PortfolioContent.astro";
 const {
     id="portfolio",
     sectionTitle="Portfolio",
-    sectionSubtitle="Mes réalisations"
+    sectionSubtitle="Mes réalisations",
+    background="bg-colored"
 } = Astro.props;
 
 const allProjects = await Astro.glob("../../content/portfolio/*.md");
 ---
 
-<SectionLayout {id} {sectionTitle} {sectionSubtitle}>
+<SectionLayout {id} {sectionTitle} {sectionSubtitle} {background}>
     <div class="portfolio__container container grid">
         <div class="portfolio__images">
             {
