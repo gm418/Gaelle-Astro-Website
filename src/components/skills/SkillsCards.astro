@@ -1,17 +1,12 @@
 ---
 // data import
 import skillsData from "../../data/skillsData";
-
-const {
-    lightColor,
-    darkColor
-} = Astro.props;
 ---
 
 <ul class="container grid">
     {
         skillsData.map(skill => (
-            <li>
+            <li class="bg-colored">
                 <i class={'uil-' + skill.icon} aria-hidden="true"></i>
                 <p>{skill.name}</p>   
             </li>
@@ -20,7 +15,7 @@ const {
 </ul>
 
 
-<style define:vars={{ lightColor, darkColor }}>
+<style>
     .container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -40,7 +35,7 @@ const {
         display: block;
         text-align: center;
         font-size: 1.5rem;
-        color: var(--lightColor);
+        color: var(--primary-color);
         margin-bottom: var(--mar-1);
     }
 

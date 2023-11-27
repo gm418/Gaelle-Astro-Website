@@ -9,14 +9,9 @@ const {
     id="skills",
     sectionTitle="Compétences",
     sectionSubtitle="Je peux me rendre utile",
-    hue = 336,
-    darkColor = `hsl(${hue}, 78%, 38%)`,
-    lightColor = `hsl(${hue}, 48%, 60%)`
 } = Astro.props
-
-const color = darkColor;
 ---
 
-<SectionLayout {id} {sectionTitle} {sectionSubtitle} {darkColor}>
-    <SkillsCards {lightColor} {darkColor} />
+<SectionLayout {id} {sectionTitle} {sectionSubtitle}>
+    <SkillsCards />
 </SectionLayout>
