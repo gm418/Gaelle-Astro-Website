@@ -10,9 +10,6 @@ import socialNetworksData from "../../data/socialNetworksData";
 const { 
     name = "Gaëlle",
     profession = "Développeuse front-end",
-    hue = 115,
-    lightColor = `hsl(${hue}, 66%, 82%)`,
-    darkColor = `hsl(${hue}, 100%, 15%)`,
 } = Astro.props;
 ---
 
@@ -38,7 +35,7 @@ const {
                 </ul>
                 
                 <div class="home__img">
-                    <Blob {lightColor} />
+                    <Blob />
                 </div>
                 
                 <div>
@@ -68,10 +65,11 @@ const {
                 />
             </div>
         </div>
+
     </div>
 </section>
 
-<style define:vars={{ darkColor }}>
+<style>
     .home__container {
         gap: 1rem;
     }
@@ -84,7 +82,6 @@ const {
     h1 {
         font-size: var(--h1-font-size);
         margin-bottom: var(--mar-0-5);
-        color: var(--darkColor);
 
     }
 
