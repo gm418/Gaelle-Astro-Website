@@ -1,8 +1,6 @@
 ---
 const {
     data,
-    lightColor,
-    darkColor,
     classes,
     id,
     ariaHidden
@@ -31,7 +29,7 @@ const {
     }
 </ul>
 
-<style define:vars={{ lightColor, darkColor }}>
+<style>
     li {
         display: grid;
         grid-template-columns: 1fr max-content 1fr;
@@ -47,24 +45,20 @@ const {
         height: 13px;
         width: 13px;
         border-radius: 50%;
-        background-color: var(--lightColor);
+        background-color: var(--secondary-color);
     }
 
     .qualification__line {
         display: block;
         height: 100%;
         width: 1px;
-        background-color: var(--lightColor);
+        background-color: var(--secondary-color);
         transform: translate(6px, -7px);
     }
 
     .qualification__text {
         line-height: 1.2em;
         padding-bottom: 20px;
-    }
-
-    h3 {
-        color: var(--darkColor);
     }
 
     .qualification__subtitle {

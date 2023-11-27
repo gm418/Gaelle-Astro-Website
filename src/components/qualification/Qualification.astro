@@ -12,13 +12,11 @@ const {
     id="qualification",
     sectionTitle="Expérience",
     sectionSubtitle="Mon parcours professionnel",
-    hue = 16,
-    lightColor = `hsl(${hue}, 100%, 43%)`,
-    darkColor = `hsl(${hue}, 100%, 32%)`
+    background="bg-colored"
 } = Astro.props
 ---
 
-<SectionLayout {id} {sectionTitle} {sectionSubtitle} {darkColor} {lightColor}>
+<SectionLayout {id} {sectionTitle} {sectionSubtitle} {background}>
     <div class="container">
         <div class="qualification__buttons" role="tablist" aria-label="Sections du CV">
             <button class="qualification__button js-qualification__active" role="tab" aria-selected="true" aria-controls="#education">
@@ -48,7 +46,7 @@ const {
     </div>
 </SectionLayout>
 
-<style define:vars={{ lightColor }}>
+<style>
     .qualification__buttons {
         display: flex;
         justify-content: space-evenly;
@@ -59,12 +57,7 @@ const {
         font-size: var(--h3-font-size);
     }
 
-    button:hover {
-        color: var(--lightColor);
-    }
-
     button.js-qualification__active {
-        color: var(--darkColor);
         text-decoration: underline;
         text-decoration-thickness: 1px;
         text-underline-position: under;
