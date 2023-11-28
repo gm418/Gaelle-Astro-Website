@@ -10,16 +10,13 @@ const {
     id="contact",
     sectionTitle="Un projet ?",
     sectionSubtitle="Parlons-en",
-    hue = 180,
-    darkColor = `hsl(${hue}, 100%, 24%)`,
-    lightColor = "#e2f0f0"
 } = Astro.props;
 ---
 
-<SectionLayout {id} {sectionTitle} {sectionSubtitle} {darkColor}>
+<SectionLayout {id} {sectionTitle} {sectionSubtitle}>
     <div class="container grid">
-        <ContactInfo {darkColor} />
-        <ContactForm {darkColor} {lightColor} />
+        <ContactInfo />
+        <ContactForm />
     </div>
 </SectionLayout>
 

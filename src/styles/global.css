@@ -180,7 +180,7 @@
     --primary-color: hsl(25, 100%, 62%);
     --primary-color-lt: hsl(25, 66%, 82%);
     --secondary-color: hsl(340, 68%, 53%);
-
+    --secondary-color-lt: hsl(340, 66%, 82%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Questrial', sans-serif;
