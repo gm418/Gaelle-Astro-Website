@@ -10,10 +10,11 @@ const {
     id="contact",
     sectionTitle="Un projet ?",
     sectionSubtitle="Parlons-en",
+    background="bg-light"
 } = Astro.props;
 ---
 
-<SectionLayout {id} {sectionTitle} {sectionSubtitle}>
+<SectionLayout {id} {sectionTitle} {sectionSubtitle} {background}>
     <div class="container grid">
         <ContactInfo />
         <ContactForm />

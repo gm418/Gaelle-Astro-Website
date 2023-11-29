@@ -10,3 +10,19 @@ function scrollHeader() {
 }
 
 window.addEventListener('scroll', scrollHeader);
+
+
+/*let sections = document.querySelectorAll('section');
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        let bgColor = window.getComputedStyle(entry.target).backgroundColor;
+
+        if (entry.isIntersecting) {
+            document.querySelector('header').style.backgroundColor = bgColor;
+        }
+    });
+}, {threshold: 1});
+
+sections.forEach(section => {
+    observer.observe(section);
+});*/
