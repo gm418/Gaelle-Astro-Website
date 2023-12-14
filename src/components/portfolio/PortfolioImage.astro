@@ -12,6 +12,11 @@ const { images, index } = Astro.props;
 <div class={`image_${index + 1}`}>
     {
         images.map((image) => (
+            console.log(image.src)
+        ))
+    }
+    {
+        images.map((image) => (
             <img src={image.src} alt={image.alt} />
         ))
     }

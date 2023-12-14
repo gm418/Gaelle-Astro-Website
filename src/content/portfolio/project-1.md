@@ -3,15 +3,15 @@ title: MAM aux Trésors
 techs: MongoDB Express AngularJS NodeJS JavaScript Materialize
 images: [
     {
-        src: "/images/mam-lg.jpg",
+        src: "src/content/portfolio/images/mam-lg.jpg",
         alt: ""
     },
     {
-        src: "/images/mam-tb.jpg",
+        src: "src/content/portfolio/images/mam-tb.jpg",
         alt: ""
     },
     {
-        src: "/images/mam-mb.jpg",
+        src: "src/content/portfolio/images/mam-mb.jpg",
         alt: ""
     }
 ]

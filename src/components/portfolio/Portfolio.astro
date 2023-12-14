@@ -5,6 +5,7 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
 // component imports
 import PortfolioImage from "./PortfolioImage.astro";
 import PortfolioContent from "./PortfolioContent.astro";
+import { getCollection } from "astro:content";
 
 
 const {
@@ -14,15 +15,16 @@ const {
     background="bg-colored"
 } = Astro.props;
 
-const allProjects = await Astro.glob("../../content/portfolio/*.md");
+const allProjects = await getCollection('portfolio');
 ---
+
 
 <SectionLayout {id} {sectionTitle} {sectionSubtitle} {background}>
     <div class="portfolio__container container grid">
         <div class="portfolio__images">
             {
                 allProjects.map((project, i) => (
-                    <PortfolioImage images={project.frontmatter.images} index={i} />
+                    <PortfolioImage images={project.data.images} index={i} />
                 ))
             }
         </div>
@@ -30,9 +32,9 @@ const allProjects = await Astro.glob("../../content/portfolio/*.md");
             {
                 allProjects.map((project, i) => (
                     <PortfolioContent
-                        title={project.frontmatter.title}
-                        techs={project.frontmatter.techs}
-                        description={project.rawContent}
+                        title={project.data.title}
+                        techs={project.data.techs}
+                        text={project.body}
                         index={i}
                     />
                 ))
