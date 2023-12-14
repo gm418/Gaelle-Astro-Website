@@ -4,12 +4,12 @@ import { z, defineCollection } from "astro:content";
 // 2. Define my collection + its `type` and `schema`
 const portfolioCollection = defineCollection({
     type: 'content',
-    schema: z.object({
+    schema: ({ image }) => z.object({
         title: z.string(),
         techs: z.string(),
         images: z.array(
             z.object({
-                src: z.string(),
+                src: image(),
                 alt: z.string()
             })
         )

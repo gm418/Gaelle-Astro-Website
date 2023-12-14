@@ -3,11 +3,11 @@ title: Rate Me
 techs: Ruby on Rails JavaScript Bootstrap AWS-sdk Google API]
 images: [
     {
-        src: "src/content/portfolio/images/hexa-lg.jpg",
+        src: "./images/hexa-lg.jpg",
         alt: ""  
     },
     {
-        src: "src/content/portfolio/images/hexa-tb.jpg",
+        src: "./images/hexa-tb.jpg",
         alt: ""
     }
 ]

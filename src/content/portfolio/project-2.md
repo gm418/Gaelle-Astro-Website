@@ -3,11 +3,11 @@ title: BIJ et BIJ Web
 techs: Electron MongoDB Express AngularJS NodeJS JavaScript Materialize
 images: [
     {
-        src: "src/content/portfolio/images/bij-lg.jpg",
+        src: "./images/bij-lg.jpg",
         alt: ""
     },
     {
-        src: "src/content/portfolio/images/bij-tb.jpg",
+        src: "./images/bij-tb.jpg",
         alt: ""
     }
 ]

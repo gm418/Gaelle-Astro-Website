@@ -3,15 +3,15 @@ title: Orbit
 techs: HTML5 CSS3 Scss JavaScript Startin'blox
 images: [
     {
-        src: "src/content/portfolio/images/orbit-lg.jpg",
+        src: "./images/orbit-lg.jpg",
         alt: ""
     },
     {
-        src: "src/content/portfolio/images/orbit-tb.jpg",
+        src: "./images/orbit-tb.jpg",
         alt: ""
     },
     {
-        src: "src/content/portfolio/images/orbit-mb.jpg",
+        src: "./images/orbit-mb.jpg",
         alt: ""
     }
 ]
